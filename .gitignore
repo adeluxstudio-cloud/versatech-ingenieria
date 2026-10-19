@@ -8,3 +8,6 @@ Thumbs.db
 # Material pesado de borradores
 cambios/*/assets/
 cambios/*/uploads/
+
+.vercel
+.env*
