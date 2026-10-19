@@ -47,9 +47,9 @@
   [data-reveal] { opacity:0; }
   [data-reveal="words"] { opacity:1; }
   [data-reveal="words"].is-in { animation:none; }
-  [data-reveal="media"].is-in { animation:vtMedia .95s cubic-bezier(0.23,1,0.32,1) both; }
-  [data-reveal].is-in { animation:vtUp .7s cubic-bezier(0.23,1,0.32,1) both; }
-  [data-reveal="scale"].is-in { animation:vtIn .8s cubic-bezier(0.23,1,0.32,1) both; }
+  [data-reveal="media"].is-in { animation:vtMedia .95s cubic-bezier(0.23,1,0.32,1) both; opacity:1; }
+  [data-reveal].is-in { animation:vtUp .7s cubic-bezier(0.23,1,0.32,1) both; opacity:1; }
+  [data-reveal="scale"].is-in { animation:vtIn .8s cubic-bezier(0.23,1,0.32,1) both; opacity:1; }
   .vt-grow { transform:scaleX(0); transform-origin:left; transition:transform .9s cubic-bezier(0.23,1,0.32,1); }
   [data-reveal].is-in .vt-grow { transform:scaleX(1); }
   .vt-dash { transition:width .28s cubic-bezier(0.23,1,0.32,1); }
@@ -775,6 +775,7 @@ class Component extends DCLogic {
   };
 
   componentDidMount() {
+    this._lastTab = this.state.tab;
     requestAnimationFrame(() => { this.refrescar(); this.setupScroll(); });
     this.mq = window.matchMedia('(max-width: 1080px)');
     this.mqCta = window.matchMedia('(max-width: 760px)');
@@ -785,8 +786,9 @@ class Component extends DCLogic {
     this.mqCta.addEventListener('change', this.onMqCta);
   }
 
-  componentDidUpdate(prev, prevState) {
-    if (prevState && prevState.tab !== this.state.tab) {
+  componentDidUpdate() {
+    if (this._lastTab !== this.state.tab) {
+      this._lastTab = this.state.tab;
       requestAnimationFrame(() => this.refrescar());
     }
   }
@@ -808,9 +810,11 @@ class Component extends DCLogic {
 
   refrescar() {
     const panel = this.activo();
+    if (!panel) return;
     this.splitWords(panel);
     this.setupReveal(panel);
-    this.setupVideos(this.el);
+    this.setupVideos(panel);
+    this.reproducirVisibles();
   }
 
   setupVideos(raiz, intento) {
@@ -923,7 +927,11 @@ class Component extends DCLogic {
   }
 
   setupReveal(panel) {
-    const nodos = Array.from(panel.querySelectorAll('[data-reveal]'));
+    const base = panel || this.activo();
+    if (!base) return;
+    const nodos = Array.from(base.querySelectorAll('[data-reveal]'));
+    if (!nodos.length) return;
+
     if (this.reduce()) {
       nodos.forEach((n) => { n.classList.add('is-in'); this.activarPanel(n); });
       return;
@@ -934,19 +942,33 @@ class Component extends DCLogic {
         if (!e.isIntersecting) return;
         const t = e.target;
         this.io.unobserve(t);
-        const i = Array.prototype.indexOf.call(t.parentNode.children, t);
-        t.style.animationDelay = Math.min(i, 6) * 60 + 'ms';
+        const i = Array.prototype.indexOf.call(t.parentNode ? t.parentNode.children : [], t);
+        t.style.animationDelay = Math.min(Math.max(i, 0), 6) * 60 + 'ms';
         t.classList.add('is-in');
         this.activarPanel(t);
       });
-    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
-    nodos.forEach((n) => this.io.observe(n));
+    }, { rootMargin: '100px 0px 100px 0px', threshold: 0.01 });
+
+    nodos.forEach((n) => {
+      const r = n.getBoundingClientRect();
+      const inView = r.top < window.innerHeight + 120 && r.bottom > -80;
+      if (inView) {
+        n.classList.add('is-in');
+        this.activarPanel(n);
+      } else {
+        this.io.observe(n);
+      }
+    });
   }
 
   ir = (tab) => () => {
-    this.setState({ tab: tab, menuAbierto: false });
+    this._lastTab = tab;
+    this.setState({ tab: tab, menuAbierto: false }, () => {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      requestAnimationFrame(() => this.refrescar());
+    });
     window.scrollTo({ top: 0, behavior: 'auto' });
-    requestAnimationFrame(() => { this.setupVideos(this.el); this.reproducirVisibles(); });
+    setTimeout(() => this.refrescar(), 35);
   };
 
   alternarMenu = () => this.setState((s) => ({ menuAbierto: !s.menuAbierto }));
