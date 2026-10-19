@@ -1,0 +1,65 @@
+/* Landing shell — header sticky + footer institucional + greca decorativa */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg-canvas);color:var(--text-primary);font-family:var(--font-body);scroll-behavior:smooth}
+
+/* ── Header ───────────────────────────────────────── */
+.lhdr{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid var(--border-subtle);
+}
+.lhdr-inner{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;gap:32px}
+.lhdr-brand{display:flex;align-items:center;gap:14px}
+.lhdr-brand img.logo{height:34px}
+.lhdr-brand .vbar{width:1px;height:26px;background:var(--border-default)}
+.lhdr-brand .muni{display:flex;align-items:center;gap:8px;color:var(--text-tertiary);font-size:11px;line-height:1.2}
+.lhdr-brand .muni img{height:22px;opacity:.85}
+.lhdr-brand .muni b{display:block;color:var(--text-secondary);font-size:12px;font-weight:600}
+
+.lhdr-nav{display:flex;align-items:center;gap:4px;margin-left:auto}
+.lhdr-nav a{padding:8px 14px;border-radius:var(--r-md);font-size:14px;font-weight:500;color:var(--text-secondary);text-decoration:none;transition:all 150ms var(--ease-out)}
+.lhdr-nav a:hover{background:var(--bg-subtle);color:var(--text-primary)}
+.lhdr-nav a.current{color:var(--brand-primary);background:var(--brand-primary-soft);font-weight:600}
+
+.lhdr-cta{display:flex;align-items:center;gap:8px;padding-left:16px;border-left:1px solid var(--border-subtle)}
+.lbtn{height:38px;padding:0 16px;border-radius:var(--r-md);font-family:var(--font-body);font-size:13.5px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:1px solid transparent;transition:all 150ms var(--ease-out);white-space:nowrap}
+.lbtn.ghost{background:transparent;color:var(--text-primary);border-color:var(--border-default)}
+.lbtn.ghost:hover{background:var(--bg-subtle);border-color:var(--border-strong)}
+.lbtn.primary{background:var(--brand-primary);color:#fff;border-color:var(--brand-primary)}
+.lbtn.primary:hover{background:var(--brand-primary-hover)}
+.lbtn.lg{height:48px;padding:0 22px;font-size:15px}
+.lbtn.xl{height:56px;padding:0 28px;font-size:16px}
+
+.lhdr-mob{display:none;margin-left:auto;width:42px;height:42px;border-radius:var(--r-md);border:1px solid var(--border-default);background:var(--bg-surface);align-items:center;justify-content:center;cursor:pointer;color:var(--text-primary)}
+
+/* ── Footer ───────────────────────────────────────── */
+.lftr{background:var(--xicoh-neutral-900);color:var(--xicoh-neutral-300);margin-top:80px;position:relative;overflow:hidden}
+.lftr::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--xicoh-cobalto-500) 0%,var(--xicoh-tierra-500) 50%,var(--xicoh-maiz-500) 100%);
+}
+.lftr-greca{position:absolute;top:32px;right:-60px;width:520px;height:130px;opacity:.08;pointer-events:none}
+.lftr-inner{max-width:1280px;margin:0 auto;padding:56px 24px 28px;position:relative;z-index:1}
+.lftr-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.lftr-col h4{font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;margin:0 0 16px;text-transform:uppercase;letter-spacing:.06em}
+.lftr-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.lftr-col a{color:var(--xicoh-neutral-400);text-decoration:none;font-size:13px;display:inline-flex;align-items:center;gap:6px;transition:color 150ms}
+.lftr-col a:hover{color:#fff}
+.lftr-col p{margin:0 0 12px;font-size:13px;line-height:1.6;color:var(--xicoh-neutral-400)}
+.lftr-brand img{height:30px;filter:brightness(0) invert(1);margin-bottom:14px}
+.lftr-social{display:flex;gap:8px;margin-top:16px}
+.lftr-social a{width:36px;height:36px;border-radius:var(--r-sm);background:rgba(255,255,255,.06);display:inline-flex;align-items:center;justify-content:center}
+.lftr-social a:hover{background:rgba(255,255,255,.12)}
+.lftr-bar{padding-top:24px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--xicoh-neutral-500)}
+.lftr-bar .pwr{display:flex;align-items:center;gap:8px}
+.lftr-bar .pwr img{height:18px;opacity:.6}
+
+@media (max-width:880px){
+  .lhdr-nav,.lhdr-cta{display:none}
+  .lhdr-mob{display:inline-flex}
+  .lftr-grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:520px){
+  .lftr-grid{grid-template-columns:1fr}
+}

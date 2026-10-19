@@ -1,0 +1,96 @@
+/* XICOH citizen-shell — shared mobile shell styles for surfaces/citizen/* */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg-canvas);color:var(--text-primary);font-family:var(--font-body)}
+body{min-height:100vh;display:flex;justify-content:center;padding:0}
+.app{width:100%;max-width:430px;background:var(--bg-canvas);min-height:100vh;position:relative;border-left:1px solid var(--border-subtle);border-right:1px solid var(--border-subtle);display:flex;flex-direction:column}
+
+/* ── Header ─────────────────────────────────────────── */
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;background:var(--bg-surface);border-bottom:1px solid var(--border-subtle);position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+.hdr-l{display:flex;align-items:center;gap:10px;min-width:0}
+.hdr img.logo{height:26px}
+.hdr .vert{width:1px;height:22px;background:var(--border-default)}
+.hdr .muni{display:flex;align-items:center;gap:6px;color:var(--text-tertiary);font-size:11px}
+.hdr .muni img{height:16px;opacity:.8}
+.hdr .ttl{font-family:var(--font-display);font-size:15px;font-weight:600;letter-spacing:-.005em;color:var(--text-primary)}
+
+.iconbtn{width:38px;height:38px;border-radius:var(--r-md);border:1px solid var(--border-subtle);background:var(--bg-surface);display:flex;align-items:center;justify-content:center;color:var(--text-secondary);cursor:pointer;position:relative;flex-shrink:0}
+.iconbtn:hover{background:var(--bg-subtle)}
+.iconbtn .ndot{position:absolute;top:8px;right:9px;width:8px;height:8px;background:var(--brand-accent);border-radius:999px;border:2px solid var(--bg-surface)}
+.iconbtn .ncount{position:absolute;top:-3px;right:-3px;background:var(--brand-accent);color:#fff;font-size:9px;font-weight:700;border-radius:999px;min-width:16px;height:16px;display:flex;align-items:center;justify-content:center;padding:0 3px;border:2px solid var(--bg-surface)}
+
+.topback{display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--text-secondary);font-size:13px;font-weight:500;padding:0;background:none;border:none;font-family:inherit}
+.topback:hover{color:var(--text-primary)}
+
+/* ── Body shell ─────────────────────────────────────── */
+.scroll{flex:1;overflow:auto;padding-bottom:80px}
+.scroll.no-bnav{padding-bottom:24px}
+
+/* ── Bottom nav (shared) ────────────────────────────── */
+.bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;display:flex;background:var(--bg-surface);border-top:1px solid var(--border-subtle);padding:8px 8px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(12px);z-index:20}
+.bnav .it{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px;color:var(--text-tertiary);font-size:10px;font-weight:500;cursor:pointer;border-radius:var(--r-sm);text-decoration:none}
+.bnav .it.active{color:var(--brand-primary)}
+.bnav .it .nb{position:relative}
+.bnav .it .nb::after{content:attr(data-n);position:absolute;top:-3px;right:-7px;background:var(--brand-accent);color:#fff;font-size:9px;font-weight:700;border-radius:999px;padding:1px 5px;line-height:1.1}
+.bnav .it .nb:not([data-n])::after{display:none}
+
+/* ── Buttons ───────────────────────────────────────── */
+.btn{height:44px;padding:0 16px;border-radius:var(--r-md);border:1px solid var(--border-default);background:var(--bg-surface);color:var(--text-primary);font-weight:500;font-size:14px;font-family:var(--font-body);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 200ms var(--ease-out)}
+.btn:hover{background:var(--bg-subtle)}
+.btn.primary{background:var(--brand-primary);color:#fff;border-color:var(--brand-primary);box-shadow:var(--shadow-1)}
+.btn.primary:hover{background:var(--brand-primary-hover);box-shadow:var(--shadow-2)}
+.btn.cta-lg{height:52px;font-size:15px;font-weight:600}
+.btn.ghost{background:transparent;border-color:transparent;color:var(--text-secondary)}
+.btn.ghost:hover{background:var(--bg-subtle)}
+.btn.danger{color:var(--status-danger);border-color:var(--border-default)}
+.btn.block{width:100%}
+
+.cta-bar{position:sticky;bottom:0;background:var(--bg-surface);border-top:1px solid var(--border-subtle);padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;gap:10px;align-items:center;z-index:5}
+
+/* ── Cards ─────────────────────────────────────────── */
+.card{background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--r-lg);padding:16px}
+.card.elev{box-shadow:var(--shadow-1)}
+.card-row{display:flex;align-items:center;gap:12px;padding:14px 16px;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--r-md)}
+
+/* ── Section title ─────────────────────────────────── */
+.sec{padding:18px 16px 0}
+.sec h2{font-family:var(--font-display);font-size:16px;font-weight:600;margin:0 0 12px;display:flex;justify-content:space-between;align-items:baseline;letter-spacing:-.005em}
+.sec h2 a{font-family:var(--font-body);font-size:12px;color:var(--brand-primary);text-decoration:none;font-weight:500}
+
+/* ── Page hero ─────────────────────────────────────── */
+.page-hero{padding:18px 16px 14px;background:var(--bg-surface);border-bottom:1px solid var(--border-subtle)}
+.page-hero h1{font-family:var(--font-display);font-size:24px;font-weight:700;line-height:1.2;letter-spacing:-.015em;margin:0}
+.page-hero p{margin:6px 0 0;color:var(--text-secondary);font-size:14px;line-height:1.5}
+
+/* ── Badges ────────────────────────────────────────── */
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:3px 8px;border-radius:999px;background:var(--bg-subtle);color:var(--text-secondary)}
+.badge .dot{width:6px;height:6px;border-radius:999px;background:currentColor}
+.badge.ok{background:var(--status-success-soft);color:var(--xicoh-maiz-700)}
+.badge.warn{background:var(--status-warning-soft);color:var(--xicoh-ambar-500)}
+.badge.err{background:var(--status-danger-soft);color:var(--xicoh-rojo-500)}
+.badge.info{background:var(--status-info-soft);color:var(--xicoh-cielo-500)}
+.badge.brand{background:var(--brand-primary-soft);color:var(--brand-primary)}
+.badge.accent{background:var(--brand-accent-soft);color:var(--xicoh-tierra-700)}
+
+/* ── Mono / folio ──────────────────────────────────── */
+.mono{font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary)}
+
+/* ── Forms ─────────────────────────────────────────── */
+.field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.field label{font-size:13px;font-weight:600}
+.field .h{font-size:11px;color:var(--text-tertiary)}
+.field input,.field textarea,.field select{height:44px;border-radius:var(--r-md);border:1px solid var(--border-default);background:var(--bg-surface);padding:0 14px;font-family:var(--font-body);font-size:14px;outline:none;transition:all 200ms var(--ease-out);color:var(--text-primary)}
+.field textarea{height:auto;padding:12px 14px;resize:vertical;min-height:80px}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--brand-primary);box-shadow:var(--shadow-focus)}
+.field .err{color:var(--status-danger);font-size:11px;display:flex;align-items:center;gap:4px;margin-top:2px}
+
+/* ── List items ───────────────────────────────────── */
+.list{display:flex;flex-direction:column;gap:10px}
+
+/* ── SVG icons ────────────────────────────────────── */
+svg{flex-shrink:0}
+
+/* ── Empty state ──────────────────────────────────── */
+.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 24px;gap:10px}
+.empty .ic{width:56px;height:56px;border-radius:999px;background:var(--brand-primary-soft);color:var(--brand-primary);display:flex;align-items:center;justify-content:center}
+.empty h3{font-family:var(--font-display);font-size:16px;font-weight:600;margin:0}
+.empty p{margin:0;color:var(--text-secondary);font-size:13px;max-width:260px;line-height:1.5}

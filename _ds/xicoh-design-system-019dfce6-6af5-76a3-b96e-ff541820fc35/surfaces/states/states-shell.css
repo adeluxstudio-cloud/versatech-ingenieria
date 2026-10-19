@@ -1,0 +1,46 @@
+/* Empty/error states con mascota */
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg-canvas);color:var(--text-primary);font-family:var(--font-body);min-height:100vh}
+body{display:flex;flex-direction:column}
+
+.es-bg{position:fixed;inset:0;z-index:-1;background:linear-gradient(160deg,var(--xicoh-cobalto-50) 0%,#fff 60%,var(--xicoh-tierra-50) 100%);overflow:hidden}
+.es-bg::before{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:80vw;max-width:900px;height:200px;background:url("../../assets/xicoh-greca-pattern.svg") center/contain repeat-x;opacity:.05}
+
+.es-top{padding:24px 32px;display:flex;align-items:center;justify-content:space-between}
+.es-top img{height:30px}
+.es-top a{color:var(--text-secondary);text-decoration:none;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.es-top a:hover{color:var(--brand-primary)}
+
+.es-main{flex:1;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;z-index:1}
+.es-card{width:100%;max-width:560px;text-align:center;padding:32px}
+
+.es-mascot{width:200px;height:200px;margin:0 auto 24px;position:relative}
+.es-code{font-family:var(--font-display);font-size:96px;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--brand-primary);margin:0 0 14px;text-shadow:0 4px 0 rgba(11,32,84,.06)}
+.es-card h1{font-family:var(--font-display);font-size:28px;font-weight:700;letter-spacing:-.01em;margin:0 0 12px}
+.es-card p{margin:0 auto 28px;font-size:15.5px;color:var(--text-secondary);line-height:1.55;max-width:440px}
+
+.es-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.es-btn{height:44px;padding:0 22px;border-radius:var(--r-md);border:0;background:var(--brand-primary);color:#fff;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+.es-btn:hover{background:var(--brand-primary-hover)}
+.es-btn.ghost{background:transparent;color:var(--text-primary);border:1px solid var(--border-default)}
+.es-btn.ghost:hover{background:var(--bg-subtle)}
+
+.es-suggest{margin-top:36px;padding:20px;background:#fff;border:1px solid var(--border-subtle);border-radius:var(--r-lg);text-align:left}
+.es-suggest h3{font-family:var(--font-display);font-size:14px;font-weight:600;margin:0 0 12px;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:.06em}
+.es-suggest ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px}
+.es-suggest a{display:flex;align-items:center;gap:10px;padding:10px 12px;color:var(--text-primary);text-decoration:none;border-radius:var(--r-sm);font-size:13.5px;font-weight:500}
+.es-suggest a:hover{background:var(--bg-subtle)}
+.es-suggest a svg{color:var(--text-tertiary);margin-left:auto}
+
+.es-footer{padding:18px 24px;text-align:center;font-size:11.5px;color:var(--text-tertiary)}
+
+/* Mascot blink */
+@keyframes blink{0%,90%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.eye{animation:blink 4s infinite;transform-origin:center}
+
+/* Loading shimmer */
+.dots{display:inline-flex;gap:6px;margin-top:8px}
+.dots span{width:10px;height:10px;border-radius:999px;background:var(--brand-primary);opacity:.3;animation:bounce 1.2s infinite}
+.dots span:nth-child(2){animation-delay:.15s}
+.dots span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,80%,100%{transform:translateY(0);opacity:.3}40%{transform:translateY(-8px);opacity:1}}

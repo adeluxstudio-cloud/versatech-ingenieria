@@ -1,0 +1,298 @@
+/* =========================================================
+   XICOH DESIGN SYSTEM — colors_and_type.css
+   Foundation tokens. Light + Dark. Tailwind v4 / shadcn ready.
+   Drop-in replacement for the current src/app/globals.css :root + .dark blocks.
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ─── Brand palette ─────────────────────────────────────── */
+  --xicoh-cobalto-50:  #EEF2FF;
+  --xicoh-cobalto-100: #DCE3FF;
+  --xicoh-cobalto-200: #B7C5FE;
+  --xicoh-cobalto-300: #8AA0F8;
+  --xicoh-cobalto-400: #557AEB;
+  --xicoh-cobalto-500: #1E4DD8;  /* PRIMARY */
+  --xicoh-cobalto-600: #163CB0;
+  --xicoh-cobalto-700: #122F8A;
+  --xicoh-cobalto-800: #11286F;
+  --xicoh-cobalto-900: #0E2256;
+
+  --xicoh-tierra-50:  #FFF3EB;
+  --xicoh-tierra-100: #FFE0CB;
+  --xicoh-tierra-200: #FFC093;
+  --xicoh-tierra-300: #FF9D5C;
+  --xicoh-tierra-400: #F58438;
+  --xicoh-tierra-500: #E8742C;  /* ACCENT */
+  --xicoh-tierra-600: #C25C1E;
+  --xicoh-tierra-700: #984718;
+  --xicoh-tierra-800: #733614;
+  --xicoh-tierra-900: #532811;
+
+  --xicoh-maiz-50:  #E9F8F0;
+  --xicoh-maiz-100: #C9EDD8;
+  --xicoh-maiz-200: #94DCB1;
+  --xicoh-maiz-300: #5EC68A;
+  --xicoh-maiz-400: #34AC6E;
+  --xicoh-maiz-500: #1F8A5B;  /* SUCCESS */
+  --xicoh-maiz-600: #156F49;
+  --xicoh-maiz-700: #0F573A;
+  --xicoh-maiz-800: #0B412C;
+  --xicoh-maiz-900: #082F20;
+
+  /* ─── Semantic single-tone ──────────────────────────────── */
+  --xicoh-ambar-500: #C77800;
+  --xicoh-ambar-100: #FFEFD0;
+  --xicoh-rojo-500:  #C8362E;
+  --xicoh-rojo-100:  #FBE0DE;
+  --xicoh-cielo-500: #0A6BA8;
+  --xicoh-cielo-100: #DCEEFA;
+
+  /* ─── Warm neutrals (hue ~35°, not cold blue-gray) ──────── */
+  --xicoh-neutral-0:    #FFFFFF;
+  --xicoh-neutral-50:   #FAF8F5;
+  --xicoh-neutral-100:  #F4F1EC;
+  --xicoh-neutral-200:  #E8E3DA;
+  --xicoh-neutral-300:  #D4CDC0;
+  --xicoh-neutral-400:  #A89E8C;
+  --xicoh-neutral-500:  #7A7163;
+  --xicoh-neutral-600:  #564F44;
+  --xicoh-neutral-700:  #3B362E;
+  --xicoh-neutral-800:  #25221D;
+  --xicoh-neutral-900:  #15130F;
+
+  /* ─── Semantic surface tokens (LIGHT) ───────────────────── */
+  --bg-canvas:        var(--xicoh-neutral-50);
+  --bg-surface:       var(--xicoh-neutral-0);
+  --bg-elevated:      var(--xicoh-neutral-0);
+  --bg-subtle:        var(--xicoh-neutral-100);
+  --bg-muted:         var(--xicoh-neutral-200);
+  --bg-inverted:      var(--xicoh-neutral-900);
+
+  --text-primary:     var(--xicoh-neutral-900);
+  --text-secondary:   var(--xicoh-neutral-600);
+  --text-tertiary:    var(--xicoh-neutral-500);
+  --text-disabled:    var(--xicoh-neutral-400);
+  --text-on-brand:    var(--xicoh-neutral-0);
+  --text-on-accent:   var(--xicoh-neutral-900);
+  --text-link:        var(--xicoh-cobalto-600);
+
+  --border-subtle:    var(--xicoh-neutral-200);
+  --border-default:   var(--xicoh-neutral-300);
+  --border-strong:    var(--xicoh-neutral-400);
+
+  --brand-primary:        var(--xicoh-cobalto-500);
+  --brand-primary-hover:  var(--xicoh-cobalto-600);
+  --brand-primary-soft:   var(--xicoh-cobalto-50);
+  --brand-accent:         var(--xicoh-tierra-500);
+  --brand-accent-hover:   var(--xicoh-tierra-600);
+  --brand-accent-soft:    var(--xicoh-tierra-50);
+
+  --status-success:       var(--xicoh-maiz-500);
+  --status-success-soft:  var(--xicoh-maiz-50);
+  --status-warning:       var(--xicoh-ambar-500);
+  --status-warning-soft:  var(--xicoh-ambar-100);
+  --status-danger:        var(--xicoh-rojo-500);
+  --status-danger-soft:   var(--xicoh-rojo-100);
+  --status-info:          var(--xicoh-cielo-500);
+  --status-info-soft:     var(--xicoh-cielo-100);
+
+  /* ─── Type scale ────────────────────────────────────────── */
+  --font-display: "Sora", system-ui, -apple-system, sans-serif;
+  --font-body:    "Public Sans", system-ui, -apple-system, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  --fs-display:  3.5rem;   /* 56 */
+  --fs-h1:       2.25rem;  /* 36 */
+  --fs-h2:       1.75rem;  /* 28 */
+  --fs-h3:       1.375rem; /* 22 */
+  --fs-h4:       1.125rem; /* 18 */
+  --fs-body-lg:  1.0625rem;/* 17 */
+  --fs-body:     0.9375rem;/* 15 */
+  --fs-body-sm:  0.8125rem;/* 13 */
+  --fs-caption:  0.75rem;  /* 12 */
+  --fs-overline: 0.6875rem;/* 11 */
+  --fs-mono:     0.875rem; /* 14 */
+
+  --lh-display: 1.05;
+  --lh-tight:   1.15;
+  --lh-snug:    1.3;
+  --lh-normal:  1.55;
+  --lh-relaxed: 1.65;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semibold:600;
+  --fw-bold:    700;
+
+  --tracking-overline: 0.08em;
+  --tracking-tight:   -0.01em;
+
+  /* ─── Spacing (4px scale) ───────────────────────────────── */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* ─── Radii ─────────────────────────────────────────────── */
+  --r-sm:   6px;
+  --r-md:  10px;
+  --r-lg:  14px;
+  --r-xl:  20px;
+  --r-2xl: 28px;
+  --r-full: 999px;
+  --radius: var(--r-md); /* shadcn alias */
+
+  /* ─── Shadows ───────────────────────────────────────────── */
+  --shadow-1: 0 1px 2px rgba(20, 28, 50, .06), 0 1px 3px rgba(20, 28, 50, .04);
+  --shadow-2: 0 4px 12px rgba(20, 28, 50, .08), 0 2px 4px rgba(20, 28, 50, .04);
+  --shadow-3: 0 12px 32px rgba(20, 28, 50, .12), 0 4px 8px rgba(20, 28, 50, .06);
+  --shadow-focus: 0 0 0 3px rgba(30, 77, 216, .35);
+
+  /* ─── Motion ────────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(.2, .8, .2, 1);
+  --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+  --duration-fast:   120ms;
+  --duration-base:   200ms;
+  --duration-slow:   300ms;
+
+  /* ─── shadcn/ui aliases (so existing components reuse) ──── */
+  --background:           var(--bg-canvas);
+  --foreground:           var(--text-primary);
+  --card:                 var(--bg-surface);
+  --card-foreground:      var(--text-primary);
+  --popover:              var(--bg-surface);
+  --popover-foreground:   var(--text-primary);
+  --primary:              var(--brand-primary);
+  --primary-foreground:   var(--text-on-brand);
+  --secondary:            var(--bg-subtle);
+  --secondary-foreground: var(--text-primary);
+  --muted:                var(--bg-subtle);
+  --muted-foreground:     var(--text-secondary);
+  --accent:               var(--brand-accent);
+  --accent-foreground:    var(--text-on-accent);
+  --destructive:          var(--status-danger);
+  --destructive-foreground: var(--xicoh-neutral-0);
+  --border:               var(--border-subtle);
+  --input:                var(--border-default);
+  --ring:                 var(--brand-primary);
+
+  /* Sidebar (institutional dark inset retained) */
+  --sidebar:                       var(--xicoh-neutral-900);
+  --sidebar-foreground:            var(--xicoh-neutral-300);
+  --sidebar-primary:               var(--xicoh-tierra-400);
+  --sidebar-primary-foreground:    var(--xicoh-neutral-900);
+  --sidebar-accent:                var(--xicoh-neutral-800);
+  --sidebar-accent-foreground:     var(--xicoh-neutral-50);
+  --sidebar-border:                var(--xicoh-neutral-800);
+  --sidebar-ring:                  var(--xicoh-tierra-400);
+}
+
+.dark {
+  --bg-canvas:        #0E1014;
+  --bg-surface:       #15181E;
+  --bg-elevated:      #1B1F26;
+  --bg-subtle:        #1F242C;
+  --bg-muted:         #272D37;
+  --bg-inverted:      var(--xicoh-neutral-50);
+
+  --text-primary:     #F4F1EC;
+  --text-secondary:   #A89E8C;
+  --text-tertiary:    #7A7163;
+  --text-disabled:    #564F44;
+  --text-on-brand:    #FFFFFF;
+  --text-on-accent:   #15130F;
+  --text-link:        var(--xicoh-cobalto-300);
+
+  --border-subtle:    #272D37;
+  --border-default:   #353C48;
+  --border-strong:    #4A5260;
+
+  --brand-primary:        var(--xicoh-cobalto-400);
+  --brand-primary-hover:  var(--xicoh-cobalto-300);
+  --brand-primary-soft:   rgba(85, 122, 235, .12);
+  --brand-accent:         var(--xicoh-tierra-400);
+  --brand-accent-hover:   var(--xicoh-tierra-300);
+  --brand-accent-soft:    rgba(245, 132, 56, .12);
+
+  --status-success:       var(--xicoh-maiz-400);
+  --status-success-soft:  rgba(52, 172, 110, .14);
+  --status-warning:       var(--xicoh-ambar-500);
+  --status-warning-soft:  rgba(199, 120, 0, .18);
+  --status-danger:        #F26D63;
+  --status-danger-soft:   rgba(242, 109, 99, .14);
+  --status-info:          #3FA9DB;
+  --status-info-soft:     rgba(63, 169, 219, .14);
+
+  --shadow-1: 0 1px 2px rgba(0,0,0, .35), 0 1px 3px rgba(0,0,0, .25);
+  --shadow-2: 0 4px 12px rgba(0,0,0, .45), 0 2px 4px rgba(0,0,0, .25);
+  --shadow-3: 0 12px 32px rgba(0,0,0, .55), 0 4px 8px rgba(0,0,0, .35);
+  --shadow-focus: 0 0 0 3px rgba(85, 122, 235, .45);
+
+  --background:           var(--bg-canvas);
+  --foreground:           var(--text-primary);
+  --card:                 var(--bg-elevated);
+  --card-foreground:      var(--text-primary);
+  --popover:              var(--bg-elevated);
+  --popover-foreground:   var(--text-primary);
+  --primary:              var(--brand-primary);
+  --primary-foreground:   #FFFFFF;
+  --secondary:            var(--bg-subtle);
+  --secondary-foreground: var(--text-primary);
+  --muted:                var(--bg-subtle);
+  --muted-foreground:     var(--text-secondary);
+  --accent:               var(--brand-accent);
+  --accent-foreground:    var(--text-on-accent);
+  --destructive:          var(--status-danger);
+  --border:               var(--border-subtle);
+  --input:                var(--border-default);
+  --ring:                 var(--brand-primary);
+
+  --sidebar:                       #0A0C10;
+  --sidebar-foreground:            #A89E8C;
+  --sidebar-primary:               var(--xicoh-tierra-300);
+  --sidebar-primary-foreground:    #0A0C10;
+  --sidebar-accent:                #15181E;
+  --sidebar-accent-foreground:     #F4F1EC;
+  --sidebar-border:                #1B1F26;
+  --sidebar-ring:                  var(--xicoh-tierra-300);
+}
+
+/* ─── Base typography utilities ─────────────────────────────── */
+
+html, body { background: var(--bg-canvas); color: var(--text-primary); }
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.t-display  { font-family: var(--font-display); font-size: var(--fs-display); line-height: var(--lh-display); font-weight: var(--fw-bold); letter-spacing: var(--tracking-tight); }
+.t-h1       { font-family: var(--font-display); font-size: var(--fs-h1);      line-height: var(--lh-tight);   font-weight: var(--fw-bold); letter-spacing: var(--tracking-tight); }
+.t-h2       { font-family: var(--font-display); font-size: var(--fs-h2);      line-height: var(--lh-tight);   font-weight: var(--fw-semibold); }
+.t-h3       { font-family: var(--font-display); font-size: var(--fs-h3);      line-height: var(--lh-snug);    font-weight: var(--fw-semibold); }
+.t-h4       { font-family: var(--font-display); font-size: var(--fs-h4);      line-height: var(--lh-snug);    font-weight: var(--fw-semibold); }
+.t-body-lg  { font-size: var(--fs-body-lg); line-height: var(--lh-normal); }
+.t-body     { font-size: var(--fs-body);    line-height: var(--lh-normal); }
+.t-body-sm  { font-size: var(--fs-body-sm); line-height: var(--lh-normal); color: var(--text-secondary); }
+.t-caption  { font-size: var(--fs-caption); line-height: var(--lh-snug); color: var(--text-tertiary); }
+.t-overline { font-size: var(--fs-overline); line-height: var(--lh-tight); text-transform: uppercase; letter-spacing: var(--tracking-overline); font-weight: var(--fw-semibold); color: var(--text-tertiary); }
+.t-mono     { font-family: var(--font-mono); font-size: var(--fs-mono); font-variant-numeric: tabular-nums; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

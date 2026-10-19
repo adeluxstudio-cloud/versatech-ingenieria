@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>MVD Manager Digital | Agencia de Meta Ads y adquisición de clientes</title>
+<meta name="description" content="Agencia de marketing digital especializada en adquisición de clientes: Meta Ads, Google Ads, landing pages, automatización de leads y analítica. Convertimos inversión publicitaria en clientes." />
+<meta name="keywords" content="agencia de Meta Ads, agencia de publicidad digital, Meta Ads Colombia, publicidad en Facebook e Instagram, agencia Google Ads, marketing digital para empresas, generación de leads, performance marketing" />
+<meta name="theme-color" content="#080e26" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@300;400;500;600;700&amp;family=Albert+Sans:wght@300;400;500;600;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:#080e26; color:#15235e; font-family:'Albert Sans',system-ui,sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  h1,h2,h3,h4,p,ul,ol,li,figure,blockquote { margin:0; padding:0; }
+  ul,ol { list-style:none; }
+  a { color:#5b4fa0; text-decoration:none; }
+  a:hover { color:#463a86; }
+  img { max-width:100%; }
+  input, select, textarea, button { font-family:inherit; font-size:inherit; color:inherit; }
+  summary::-webkit-details-marker { display:none; }
+  summary { list-style:none; cursor:pointer; }
+  details[open] .mvd-plus { transform:rotate(45deg); }
+  @keyframes mvdUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:none; } }
+  @keyframes mvdIn { from { opacity:0; transform:scale(.96); } to { opacity:1; transform:none; } }
+  @keyframes mvdRail { from { transform:translate3d(0,0,0); } to { transform:translate3d(-50%,0,0); } }
+  @keyframes mvdScan { 0% { background-position:-30% 0; } 100% { background-position:130% 0; } }
+  @keyframes mvdBlink { 0%,100% { opacity:.3; } 50% { opacity:1; } }
+  @keyframes mvdBar { from { transform:scaleY(.06); } to { transform:scaleY(1); } }
+  @keyframes mvdDrift { 0% { transform:translate3d(0,0,0); } 50% { transform:translate3d(0,-14px,0); } 100% { transform:translate3d(0,0,0); } }
+  @keyframes mvdWord { from { opacity:0; transform:translateY(.62em); } to { opacity:1; transform:none; } }
+  @keyframes mvdLeft { from { opacity:0; transform:translateX(-26px); } to { opacity:1; transform:none; } }
+  @keyframes mvdRight { from { opacity:0; transform:translateX(26px); } to { opacity:1; transform:none; } }
+  .mvd-w { display:inline-block; opacity:0; will-change:transform,opacity; }
+  [data-reveal="words"].is-in .mvd-w { animation:mvdWord .8s cubic-bezier(0.23,1,0.32,1) both; }
+  .mvd-btn { position:relative; overflow:hidden; }
+  .mvd-btn::after { content:""; position:absolute; top:0; bottom:0; left:-70%; width:42%; background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.5),rgba(255,255,255,0)); transform:skewX(-18deg); pointer-events:none; transition:left .6s cubic-bezier(0.23,1,0.32,1); }
+  .mvd-lit::before { content:""; position:absolute; inset:0; pointer-events:none; opacity:0; transition:opacity .3s ease; background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%), rgba(139,124,232,.18), rgba(139,124,232,0) 70%); }
+  [data-nav] a::after { content:""; position:absolute; left:11px; right:11px; bottom:5px; height:1px; background:#8b7ce8; transform:scaleX(0); transform-origin:left; transition:transform .28s cubic-bezier(0.23,1,0.32,1); }
+  details[open] > p { animation:mvdUp .42s cubic-bezier(0.23,1,0.32,1) both; }
+  .mvd-prog { position:fixed; top:0; left:0; right:0; height:2px; z-index:100; background:linear-gradient(90deg,#8b7ce8,#b98fd6); transform:scaleX(0); transform-origin:left; }
+  [data-reveal] { opacity:0; }
+  [data-reveal="words"] { opacity:1; }
+  [data-reveal="words"].is-in { animation:none; }
+  @keyframes mvdMedia { from { opacity:0; transform:scale(1.06); clip-path:inset(7% 7% 7% 7%); } to { opacity:1; transform:none; clip-path:inset(0 0 0 0); } }
+  [data-reveal="media"].is-in { animation:mvdMedia .95s cubic-bezier(0.23,1,0.32,1) both; }
+  [data-reveal="left"].is-in { animation:mvdLeft .85s cubic-bezier(0.23,1,0.32,1) both; }
+  [data-reveal="right"].is-in { animation:mvdRight .85s cubic-bezier(0.23,1,0.32,1) both; }
+  [data-reveal].is-in { animation:mvdUp .7s cubic-bezier(0.23,1,0.32,1) both; }
+  [data-reveal="scale"].is-in { animation:mvdIn .8s cubic-bezier(0.23,1,0.32,1) both; }
+  @keyframes mvdTravel { 0% { left:6%; opacity:0; } 12% { opacity:1; } 88% { opacity:1; } 100% { left:94%; opacity:0; } }
+  @keyframes mvdPulseGlow { 0%,100% { box-shadow:0 6px 16px rgba(91,79,160,.22); } 50% { box-shadow:0 10px 26px rgba(91,79,160,.45); } }
+  @keyframes mvdSweep { 0% { transform:translateX(-120%); } 100% { transform:translateX(320%); } }
+  .mvd-grow { transform:scaleX(0); transform-origin:left; transition:transform .9s cubic-bezier(0.23,1,0.32,1); }
+  [data-reveal].is-in .mvd-grow { transform:scaleX(1); }
+  .mvd-spark > span { transform:scaleY(.08); transform-origin:bottom; transition:transform .8s cubic-bezier(0.23,1,0.32,1); }
+  [data-reveal].is-in .mvd-spark > span { transform:scaleY(1); }
+  .mvd-dash { transition:width .28s cubic-bezier(0.23,1,0.32,1); }
+  @media (hover:hover) and (pointer:fine) {
+    .mvd-row:hover .mvd-arrow { transform:translateX(6px); }
+    .mvd-row:hover .mvd-dash { width:34px; }
+    .mvd-card:hover .mvd-art { transform:translateY(-3px); }
+    .mvd-card:hover .mvd-fill { width:88%; }
+    .mvd-btn:hover::after { left:130%; }
+    .mvd-lit:hover::before { opacity:1; }
+    [data-nav] a:hover::after { transform:scaleX(1); }
+    .mvd-rail:hover { animation-play-state:paused; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; } [data-reveal] { opacity:1 !important; } }
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#faf9f7;padding-bottom:{{ padBottom }}">
+
+  <div class="mvd-prog" data-prog="1"></div>
+
+  <header style="position:sticky;top:0;z-index:80;background:rgba(8,14,38,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(168,178,230,.16)">
+    <div style="max-width:1320px;margin:0 auto;padding:12px clamp(16px,4vw,44px);display:flex;align-items:center;gap:clamp(10px,1.6vw,28px)">
+      <a href="#inicio" style="display:flex;align-items:center;gap:11px;flex:none;color:#eef0fb">
+        <img src="assets/md-mark-only.png" alt="MVD Manager Digital" style="height:26px;width:auto;display:block" />
+        <span style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2.6px;text-transform:uppercase;font-weight:500;white-space:nowrap">MVD Manager Digital</span>
+      </a>
+      <nav data-nav="1" style="display:{{ navDisplay }};gap:clamp(2px,0.8vw,10px);margin-left:auto;align-items:center">
+        <a href="#servicios" style="position:relative;font-size:14px;color:#a7adca;padding:9px 11px;border-radius:3px;white-space:nowrap;transition:color .2s ease,background .2s ease" style-hover="color:#ffffff;background:rgba(139,124,232,.12)">Servicios</a>
+        <a href="#meta-ads" style="position:relative;font-size:14px;color:#a7adca;padding:9px 11px;border-radius:3px;white-space:nowrap;transition:color .2s ease,background .2s ease" style-hover="color:#ffffff;background:rgba(139,124,232,.12)">Meta Ads</a>
+        <a href="#proceso" style="position:relative;font-size:14px;color:#a7adca;padding:9px 11px;border-radius:3px;white-space:nowrap;transition:color .2s ease,background .2s ease" style-hover="color:#ffffff;background:rgba(139,124,232,.12)">Proceso</a>
+        <a href="#resultados" style="position:relative;font-size:14px;color:#a7adca;padding:9px 11px;border-radius:3px;white-space:nowrap;transition:color .2s ease,background .2s ease" style-hover="color:#ffffff;background:rgba(139,124,232,.12)">Resultados</a>
+        <a href="#nosotros" style="position:relative;font-size:14px;color:#a7adca;padding:9px 11px;border-radius:3px;white-space:nowrap;transition:color .2s ease,background .2s ease" style-hover="color:#ffffff;background:rgba(139,124,232,.12)">Nosotros</a>
+        <a href="#faq" style="position:relative;font-size:14px;color:#a7adca;padding:9px 11px;border-radius:3px;white-space:nowrap;transition:color .2s ease,background .2s ease" style-hover="color:#ffffff;background:rgba(139,124,232,.12)">FAQ</a>
+      </nav>
+      <a href="#diagnostico" class="mvd-btn" style="display:{{ ctaHeaderDisplay }};align-items:center;background:#8b7ce8;color:#0a1130;font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;font-weight:500;padding:13px clamp(13px,1.2vw,20px);border-radius:2px;white-space:nowrap;transition:background .2s ease,transform .16s cubic-bezier(0.23,1,0.32,1),box-shadow .2s ease" style-hover="background:#b6acf5;color:#0a1130;transform:translateY(-2px);box-shadow:0 16px 34px rgba(139,124,232,.32)" style-active="transform:scale(.97)">Solicitar diagnóstico</a>
+      <button type="button" onClick="{{ alternarMenu }}" aria-label="Abrir menú" aria-expanded="{{ menuAbierto }}" style="display:{{ burgerDisplay }};margin-left:auto;flex:none;width:48px;height:48px;align-items:center;justify-content:center;background:none;border:1px solid rgba(168,178,230,.24);border-radius:4px;cursor:pointer" style-active="transform:scale(.97)">
+        <span style="position:relative;display:block;width:20px;height:14px">
+          <span style="position:absolute;left:0;right:0;top:{{ burgerTop }};height:1.6px;background:#eef0fb;border-radius:2px;transform:{{ burgerRot1 }};transition:transform .3s cubic-bezier(0.23,1,0.32,1),top .3s cubic-bezier(0.23,1,0.32,1)"></span>
+          <span style="position:absolute;left:0;right:0;top:6.2px;height:1.6px;background:#eef0fb;border-radius:2px;opacity:{{ burgerMidOpacity }};transition:opacity .2s ease"></span>
+          <span style="position:absolute;left:0;right:0;bottom:{{ burgerBottom }};height:1.6px;background:#eef0fb;border-radius:2px;transform:{{ burgerRot2 }};transition:transform .3s cubic-bezier(0.23,1,0.32,1),bottom .3s cubic-bezier(0.23,1,0.32,1)"></span>
+        </span>
+      </button>
+    </div>
+    <div style="display:{{ menuDisplay }};background:#080e26;border-top:1px solid rgba(168,178,230,.16);animation:mvdUp .28s cubic-bezier(0.23,1,0.32,1) both">
+      <nav style="display:grid;padding:6px 16px 20px">
+        <a href="#servicios" onClick="{{ cerrarMenu }}" style="display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:14px 4px;font-size:17px;color:#eef0fb;border-bottom:1px solid rgba(168,178,230,.14)">Servicios<span style="color:#8b7ce8">/</span></a>
+        <a href="#meta-ads" onClick="{{ cerrarMenu }}" style="display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:14px 4px;font-size:17px;color:#eef0fb;border-bottom:1px solid rgba(168,178,230,.14)">Meta Ads<span style="color:#8b7ce8">/</span></a>
+        <a href="#proceso" onClick="{{ cerrarMenu }}" style="display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:14px 4px;font-size:17px;color:#eef0fb;border-bottom:1px solid rgba(168,178,230,.14)">Proceso<span style="color:#8b7ce8">/</span></a>
+        <a href="#resultados" onClick="{{ cerrarMenu }}" style="display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:14px 4px;font-size:17px;color:#eef0fb;border-bottom:1px solid rgba(168,178,230,.14)">Resultados<span style="color:#8b7ce8">/</span></a>
+        <a href="#nosotros" onClick="{{ cerrarMenu }}" style="display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:14px 4px;font-size:17px;color:#eef0fb;border-bottom:1px solid rgba(168,178,230,.14)">Nosotros<span style="color:#8b7ce8">/</span></a>
+        <a href="#faq" onClick="{{ cerrarMenu }}" style="display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:14px 4px;font-size:17px;color:#eef0fb;border-bottom:1px solid rgba(168,178,230,.14)">FAQ<span style="color:#8b7ce8">/</span></a>
+        <a href="#diagnostico" onClick="{{ cerrarMenu }}" style="margin-top:18px;display:flex;align-items:center;justify-content:center;min-height:56px;background:#8b7ce8;color:#0a1130;font-size:16px;font-weight:600;border-radius:2px">Solicitar diagnóstico</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" style="position:relative;background:#080e26;overflow:hidden;scroll-margin-top:72px">
+    <div style="position:absolute;top:-18%;right:-12%;width:min(760px,88vw);height:min(760px,88vw);border-radius:50%;background:radial-gradient(circle at 50% 50%, rgba(139,124,232,.34), rgba(139,124,232,0) 66%);pointer-events:none;animation:mvdDrift 14s cubic-bezier(0.4,0,0.6,1) infinite"></div>
+    <div data-par="0.16" style="position:absolute;bottom:-24%;left:-10%;width:min(620px,80vw);height:min(620px,80vw);border-radius:50%;background:radial-gradient(circle at 50% 50%, rgba(185,143,214,.2), rgba(185,143,214,0) 68%);pointer-events:none;will-change:transform"></div>
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(52px,7vw,104px) clamp(16px,5vw,44px) clamp(56px,7vw,104px);display:grid;grid-template-columns:{{ heroCols }};gap:clamp(40px,5vw,72px);align-items:center">
+      <div>
+        <p data-reveal="1" style="display:inline-flex;align-items:center;gap:10px;font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2.8px;text-transform:uppercase;color:#b6acf5;border:1px solid rgba(139,124,232,.4);border-radius:2px;padding:8px 12px">
+          <span style="width:6px;height:6px;border-radius:50%;background:#8b7ce8;animation:mvdBlink 2.2s ease-in-out infinite"></span>Agencia de adquisición de clientes
+        </p>
+        <h1 data-reveal="words" style="font-family:'Alumni Sans',sans-serif;font-weight:500;font-size:clamp(3rem,7.6vw,6.2rem);line-height:.92;letter-spacing:-.005em;text-transform:uppercase;color:#ffffff;max-width:17ch;margin-top:clamp(20px,3vw,30px);text-wrap:balance">Convierte tu inversión publicitaria en <span style="background-image:linear-gradient(96deg,#8b7ce8 6%,#b98fd6 92%);-webkit-background-clip:text;background-clip:text;color:transparent">clientes</span></h1>
+        <p data-reveal="1" style="font-size:clamp(17px,1.5vw,20px);line-height:1.7;color:#a7adca;max-width:54ch;margin-top:clamp(20px,2.6vw,28px)">Estrategia, publicidad digital y optimización para negocios que quieren crecer de forma medible. No vendemos publicidad: construimos sistemas para conseguir clientes.</p>
+        <div data-reveal="1" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:clamp(26px,3.4vw,38px)">
+          <a href="#diagnostico" class="mvd-btn" style="display:flex;align-items:center;min-height:56px;background:#8b7ce8;color:#0a1130;font-size:16px;font-weight:600;padding:0 30px;border-radius:2px;box-shadow:0 20px 50px rgba(139,124,232,.28);transition:background .2s ease,transform .16s cubic-bezier(0.23,1,0.32,1),box-shadow .2s ease" style-hover="background:#b6acf5;color:#0a1130;transform:translateY(-2px);box-shadow:0 16px 34px rgba(139,124,232,.4)" style-active="transform:scale(.97)">Quiero hacer crecer mi negocio</a>
+          <a href="#resultados" style="display:flex;align-items:center;min-height:56px;border:1px solid rgba(168,178,230,.28);color:#eef0fb;font-size:16px;font-weight:500;padding:0 30px;border-radius:2px;transition:border-color .2s ease,background .2s ease,transform .16s cubic-bezier(0.23,1,0.32,1)" style-hover="border-color:rgba(139,124,232,.7);background:rgba(139,124,232,.1);color:#ffffff;transform:translateY(-2px)" style-active="transform:scale(.97)">Ver casos de éxito</a>
+        </div>
+        <ul data-reveal="1" style="display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:clamp(30px,4vw,46px);padding-top:22px;border-top:1px solid rgba(168,178,230,.16)">
+          <li style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Meta Ads</li>
+          <li style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Google Ads</li>
+          <li style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Landing Pages</li>
+          <li style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Automatización</li>
+          <li style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Analítica</li>
+        </ul>
+      </div>
+
+      <div data-reveal="scale" style="background:#101a41;border:1px solid rgba(168,178,230,.18);border-radius:6px;box-shadow:0 34px 90px rgba(4,8,24,.6);overflow:hidden">
+        <div style="display:flex;align-items:center;gap:10px;padding:14px 18px;background:#0b1233;border-bottom:1px solid rgba(168,178,230,.16)">
+          <span style="width:7px;height:7px;border-radius:50%;background:#5fd0b0;box-shadow:0 0 12px rgba(95,208,176,.7);animation:mvdBlink 2.4s ease-in-out infinite"></span>
+          <span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#a7adca">Campaña activa · Meta Ads</span>
+          <span style="flex:1"></span>
+          <span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:1.4px;color:#6f7799">Últimos 30 días</span>
+        </div>
+        <div style="padding:20px 18px 4px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline">
+            <span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Presupuesto ejecutado</span>
+            <span style="font-family:'Roboto Mono',monospace;font-size:13px;color:#eef0fb">$2.1M / $2.4M</span>
+          </div>
+          <div style="height:6px;border-radius:99px;background:rgba(168,178,230,.14);margin-top:12px;overflow:hidden">
+            <div data-grow="88" style="width:0%;height:100%;background:linear-gradient(90deg,#8b7ce8,#b98fd6);transition:width 1.6s cubic-bezier(0.23,1,0.32,1)"></div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(168,178,230,.16);margin-top:20px;border-top:1px solid rgba(168,178,230,.16);border-bottom:1px solid rgba(168,178,230,.16)">
+          <div style="background:#101a41;padding:16px 14px">
+            <p style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:#6f7799">Leads</p>
+            <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1.15;color:#ffffff"><span data-count="340">0</span></p>
+          </div>
+          <div style="background:#101a41;padding:16px 14px">
+            <p style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:#6f7799">Costo por lead</p>
+            <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1.15;color:#b6acf5">$<span data-count="6200" data-format="mil">0</span></p>
+          </div>
+          <div style="background:#101a41;padding:16px 14px">
+            <p style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:#6f7799">Cierre</p>
+            <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1.15;color:#5fd0b0"><span data-count="21">0</span>%</p>
+          </div>
+        </div>
+        <div style="display:flex;align-items:flex-end;gap:7px;height:112px;padding:20px 18px 0">
+          <div data-bar="1" style="flex:1;height:34%;background:rgba(139,124,232,.34);border-radius:2px 2px 0 0;transform-origin:bottom"></div>
+          <div data-bar="2" style="flex:1;height:52%;background:rgba(139,124,232,.42);border-radius:2px 2px 0 0;transform-origin:bottom"></div>
+          <div data-bar="3" style="flex:1;height:44%;background:rgba(139,124,232,.38);border-radius:2px 2px 0 0;transform-origin:bottom"></div>
+          <div data-bar="4" style="flex:1;height:68%;background:rgba(139,124,232,.6);border-radius:2px 2px 0 0;transform-origin:bottom"></div>
+          <div data-bar="5" style="flex:1;height:58%;background:rgba(139,124,232,.5);border-radius:2px 2px 0 0;transform-origin:bottom"></div>
+          <div data-bar="6" style="flex:1;height:82%;background:linear-gradient(180deg,#8b7ce8,rgba(139,124,232,.5));border-radius:2px 2px 0 0;transform-origin:bottom"></div>
+          <div data-bar="7" style="flex:1;height:74%;background:rgba(139,124,232,.56);border-radius:2px 2px 0 0;transform-origin:bottom"></div>
+          <div data-bar="8" style="flex:1;height:96%;background:linear-gradient(180deg,#b98fd6,rgba(185,143,214,.5));border-radius:2px 2px 0 0;transform-origin:bottom"></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:18px;margin-top:16px;background:#0b1233;border-top:1px solid rgba(168,178,230,.16)">
+          <span style="flex:none;font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:1.6px;color:#5fd0b0;border:1px solid rgba(95,208,176,.45);border-radius:2px;padding:4px 7px">MVD</span>
+          <span style="font-size:14px;line-height:1.6;color:#a7adca">El público de remarketing baja el costo por conversación un 34%. Subimos presupuesto ahí y pausamos la creatividad 3.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#0b1233;border-top:1px solid rgba(168,178,230,.16)">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(36px,4.4vw,60px) clamp(16px,5vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:clamp(22px,3vw,36px)">
+      <div data-reveal="1">
+        <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.6rem,5vw,4rem);line-height:1;color:#ffffff"><span data-count="60">0</span>+</p>
+        <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad;margin-top:8px">Campañas gestionadas</p>
+      </div>
+      <div data-reveal="1">
+        <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.6rem,5vw,4rem);line-height:1;color:#ffffff"><span data-count="20">0</span></p>
+        <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad;margin-top:8px">Clientes atendidos</p>
+      </div>
+      <div data-reveal="1">
+        <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.6rem,5vw,4rem);line-height:1;color:#b6acf5">$<span data-count="180">0</span>M</p>
+        <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad;margin-top:8px">Inversión gestionada (COP)</p>
+      </div>
+      <div data-reveal="1">
+        <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.6rem,5vw,4rem);line-height:1;color:#b6acf5"><span data-count="8">0</span></p>
+        <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad;margin-top:8px">Sectores trabajados</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#faf9f7;border-bottom:1px solid rgba(21,35,94,.12)">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Diagnóstico</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#15235e;max-width:22ch;margin-top:16px">¿Te está pasando esto?</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1px;margin-top:clamp(34px,4.4vw,56px);background:rgba(21,35,94,.12);border:1px solid rgba(21,35,94,.12)">
+        <div data-reveal="1" class="mvd-row" style="background:#ffffff;padding:clamp(22px,3vw,32px);transition:background .24s ease" style-hover="background:#f6f4fd">
+          <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;color:#b0483c">01</p>
+          <p style="font-size:17px;line-height:1.6;color:#15235e;margin-top:14px">Inviertes en publicidad, pero no sabes qué resultados genera realmente.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="background:#ffffff;padding:clamp(22px,3vw,32px);transition:background .24s ease" style-hover="background:#f6f4fd">
+          <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;color:#b0483c">02</p>
+          <p style="font-size:17px;line-height:1.6;color:#15235e;margin-top:14px">Recibes mensajes, pero muy pocos terminan comprando.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="background:#ffffff;padding:clamp(22px,3vw,32px);transition:background .24s ease" style-hover="background:#f6f4fd">
+          <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;color:#b0483c">03</p>
+          <p style="font-size:17px;line-height:1.6;color:#15235e;margin-top:14px">No sabes cuánto te cuesta conseguir un cliente nuevo.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="background:#ffffff;padding:clamp(22px,3vw,32px);transition:background .24s ease" style-hover="background:#f6f4fd">
+          <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;color:#b0483c">04</p>
+          <p style="font-size:17px;line-height:1.6;color:#15235e;margin-top:14px">Probaste Meta Ads y algo se movió, pero no sabes cómo optimizarlo.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="background:#ffffff;padding:clamp(22px,3vw,32px);transition:background .24s ease" style-hover="background:#f6f4fd">
+          <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;color:#b0483c">05</p>
+          <p style="font-size:17px;line-height:1.6;color:#15235e;margin-top:14px">Tu publicidad funciona algunos días y otros se apaga sin explicación.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="background:#ffffff;padding:clamp(22px,3vw,32px);transition:background .24s ease" style-hover="background:#f6f4fd">
+          <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;color:#b0483c">06</p>
+          <p style="font-size:17px;line-height:1.6;color:#15235e;margin-top:14px">Dependes de recomendaciones y quieres generar clientes de forma constante.</p>
+        </div>
+      </div>
+      <p data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.15;color:#5b4fa0;max-width:34ch;margin-top:clamp(30px,4vw,46px)">MVD convierte estos problemas en una estrategia medible.</p>
+    </div>
+  </section>
+
+  <section style="background:#f2f0ea;border-bottom:1px solid rgba(21,35,94,.12)">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Nuestro enfoque</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#15235e;max-width:26ch;margin-top:16px">Estrategia, publicidad, datos y optimización</h2>
+      <p data-reveal="1" style="font-size:18px;line-height:1.75;color:#4a5573;max-width:62ch;margin-top:18px">Poner anuncios es la parte fácil. Lo que decide el resultado es todo lo que pasa alrededor: a quién le hablas, qué le prometes, dónde aterriza y qué haces con lo que la campaña te dice.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(20px,2.6vw,34px);margin-top:clamp(36px,4.4vw,60px)">
+        <div data-reveal="1" style="display:grid"><span class="mvd-grow" style="display:block;height:2px;background:#5b4fa0;margin-bottom:20px"></span>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#15235e">Estrategia</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:12px">Entendemos el negocio, el mercado, el público y los objetivos antes de gastar un peso.</p>
+        </div>
+        <div data-reveal="1" style="display:grid"><span class="mvd-grow" style="display:block;height:2px;background:#5b4fa0;margin-bottom:20px"></span>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#15235e">Publicidad</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:12px">Construimos campañas en Meta Ads y Google Ads con estructura, no con improvisación.</p>
+        </div>
+        <div data-reveal="1" style="display:grid"><span class="mvd-grow" style="display:block;height:2px;background:#5b4fa0;margin-bottom:20px"></span>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#15235e">Conversión</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:12px">Llevamos el tráfico a WhatsApp, formularios o landing pages preparadas para convertir.</p>
+        </div>
+        <div data-reveal="1" style="display:grid"><span class="mvd-grow" style="display:block;height:2px;background:#7a4fa6;margin-bottom:20px"></span>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#15235e">Datos</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:12px">Medimos lo que ocurre: eventos, conversiones, costos y comportamiento real.</p>
+        </div>
+        <div data-reveal="1" style="display:grid"><span class="mvd-grow" style="display:block;height:2px;background:#7a4fa6;margin-bottom:20px"></span>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#15235e">Optimización</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:12px">Tomamos decisiones sobre resultados, no sobre corazonadas ni tendencias.</p>
+        </div>
+        <div data-reveal="1" style="display:grid"><span class="mvd-grow" style="display:block;height:2px;background:#7a4fa6;margin-bottom:20px"></span>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#15235e">Escalamiento</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:12px">Aumentamos inversión solo donde los números ya demostraron potencial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" style="background:#faf9f7;border-bottom:1px solid rgba(21,35,94,.12);scroll-margin-top:72px">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Servicios</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#15235e;max-width:24ch;margin-top:16px">Soluciones digitales para hacer crecer tu negocio</h2>
+      <p data-reveal="1" style="font-size:18px;line-height:1.75;color:#4a5573;max-width:62ch;margin-top:18px">Tres frentes que se alimentan entre sí: la publicidad que trae la demanda, la web donde aterriza y el contenido con el que la marca se muestra.</p>
+
+      <div style="display:flex;align-items:baseline;gap:16px;margin-top:clamp(34px,4.4vw,56px);padding-bottom:18px;border-bottom:1px solid rgba(21,35,94,.14)">
+        <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Adquisición y performance</p>
+        <span style="flex:1"></span>
+        <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;color:#79819b">06 servicios</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,1.8vw,22px);margin-top:clamp(24px,3vw,34px)">
+        <article data-reveal="scale" style="grid-column:1/-1;position:relative;overflow:hidden;background:#0b1233;border:1px solid rgba(168,178,230,.2);border-radius:6px;padding:clamp(26px,3.6vw,48px)">
+          <div style="position:absolute;top:-40%;right:-8%;width:min(520px,70%);height:180%;background:radial-gradient(circle at 50% 50%, rgba(139,124,232,.34), rgba(139,124,232,0) 66%);pointer-events:none"></div>
+          <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,56px);align-items:start">
+            <div>
+              <div style="display:flex;align-items:center;gap:12px">
+                <img src="assets/meta-ads.png" alt="Logo de Meta Ads" style="width:28px;height:auto;display:block" />
+                <span style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2.4px;text-transform:uppercase;color:#b6acf5">Servicio principal</span>
+              </div>
+              <h3 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.02;color:#ffffff;margin-top:18px">Meta Ads</h3>
+              <p style="font-size:17px;line-height:1.7;color:#a7adca;max-width:52ch;margin-top:14px">Campañas de generación de clientes potenciales, ventas, mensajes a WhatsApp, remarketing y reconocimiento. Es donde tenemos más profundidad y donde la mayoría de nuestros clientes concentra su presupuesto.</p>
+              <a href="#meta-ads" class="mvd-row" style="display:inline-flex;align-items:center;gap:10px;margin-top:26px;font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#b6acf5">Ver el proceso completo<span class="mvd-arrow" style="transition:transform .22s cubic-bezier(0.23,1,0.32,1)">→</span></a>
+            </div>
+            <ul style="display:grid;gap:12px">
+              <li style="font-size:15.5px;line-height:1.6;color:#a7adca;padding-left:16px;border-left:1px solid rgba(139,124,232,.5)">Públicos fríos, cálidos y remarketing</li>
+              <li style="font-size:15.5px;line-height:1.6;color:#a7adca;padding-left:16px;border-left:1px solid rgba(139,124,232,.5)">Pruebas de creatividad y mensaje</li>
+              <li style="font-size:15.5px;line-height:1.6;color:#a7adca;padding-left:16px;border-left:1px solid rgba(139,124,232,.5)">Eventos de conversión configurados</li>
+              <li style="font-size:15.5px;line-height:1.6;color:#a7adca;padding-left:16px;border-left:1px solid rgba(139,124,232,.5)">Escalamiento por rendimiento</li>
+            </ul>
+          </div>
+        </article>
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(18px,2.4vw,22px) clamp(18px,2.4vw,22px) clamp(22px,3vw,30px);transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div class="mvd-art" data-reveal="media" style="position:relative;aspect-ratio:16/9;border:1px solid rgba(21,35,94,.1);border-radius:3px;overflow:hidden;background:#0b1233;transition:transform .3s cubic-bezier(0.23,1,0.32,1)">
+            <img src="assets/serv-google-ads.jpeg" alt="Resultados de búsqueda de Google con un anuncio en la primera posición" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+          </div>
+          <div style="display:flex;align-items:center;gap:11px;margin-top:20px"><img src="assets/google-ads.webp" alt="Logo de Google Ads" style="width:22px;height:22px;display:block" /><span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b">02</span></div>
+          <h3 style="font-size:1.32rem;font-weight:600;color:#15235e;margin-top:12px">Google Ads</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Captamos a quien ya está buscando activamente lo que vendes, con intención de compra declarada.</p>
+        </article>
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(18px,2.4vw,22px) clamp(18px,2.4vw,22px) clamp(22px,3vw,30px);transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div class="mvd-art" data-reveal="media" style="position:relative;aspect-ratio:16/9;border:1px solid rgba(21,35,94,.1);border-radius:3px;overflow:hidden;background:#0b1233;transition:transform .3s cubic-bezier(0.23,1,0.32,1)">
+            <img src="assets/serv-landing.jpeg" alt="Landing page abierta en portátil y móvil" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+          </div>
+          <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b;margin-top:20px">03</p>
+          <h3 style="font-size:1.32rem;font-weight:600;color:#15235e;margin-top:12px">Landing Pages</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Páginas diseñadas y desarrolladas con un objetivo: convertir tráfico pago en oportunidades comerciales.</p>
+        </article>
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(18px,2.4vw,22px) clamp(18px,2.4vw,22px) clamp(22px,3vw,30px);transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div class="mvd-art" data-reveal="media" style="position:relative;aspect-ratio:16/9;border:1px solid rgba(21,35,94,.1);border-radius:3px;overflow:hidden;background:#0b1233;transition:transform .3s cubic-bezier(0.23,1,0.32,1)">
+            <img src="assets/serv-automatizacion.jpeg" alt="Respuesta automática de WhatsApp junto a un panel de CRM" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+          </div>
+          <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b;margin-top:20px">04</p>
+          <h3 style="font-size:1.32rem;font-weight:600;color:#15235e;margin-top:12px">Automatización de leads</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Respuestas rápidas, seguimiento ordenado y nada de prospectos perdidos en la bandeja de entrada.</p>
+        </article>
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(18px,2.4vw,22px) clamp(18px,2.4vw,22px) clamp(22px,3vw,30px);transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div class="mvd-art" data-reveal="media" style="position:relative;aspect-ratio:16/9;border:1px solid rgba(21,35,94,.1);border-radius:3px;overflow:hidden;background:#0b1233;transition:transform .3s cubic-bezier(0.23,1,0.32,1)">
+            <img src="assets/serv-analitica.jpeg" alt="Dos monitores con paneles de métricas de campañas" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+          </div>
+          <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b;margin-top:20px">05</p>
+          <h3 style="font-size:1.32rem;font-weight:600;color:#15235e;margin-top:12px">Analítica y reportes</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Medición de resultados para saber qué funciona, qué se corta y dónde conviene invertir más.</p>
+        </article>
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(18px,2.4vw,22px) clamp(18px,2.4vw,22px) clamp(22px,3vw,30px);transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div class="mvd-art" data-reveal="media" style="position:relative;aspect-ratio:16/9;border:1px solid rgba(21,35,94,.1);border-radius:3px;overflow:hidden;background:#0b1233;transition:transform .3s cubic-bezier(0.23,1,0.32,1)">
+            <img src="assets/serv-estrategia.jpeg" alt="Embudo de adquisición dibujado en una pizarra" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+          </div>
+          <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b;margin-top:20px">06</p>
+          <h3 style="font-size:1.32rem;font-weight:600;color:#15235e;margin-top:12px">Estrategia digital</h3>
+          <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Objetivos, públicos, canales, mensajes y la estructura completa de adquisición del negocio.</p>
+        </article>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:16px;margin-top:clamp(56px,7vw,96px);padding-bottom:18px;border-bottom:1px solid rgba(21,35,94,.14)">
+        <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Web Studio /code</p>
+        <span style="flex:1"></span>
+        <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;color:#79819b">04 servicios</p>
+      </div>
+      <h3 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.05;color:#15235e;max-width:22ch;margin-top:22px">Sitios, landings y tiendas con entrega express</h3>
+      <p data-reveal="1" style="font-size:17px;line-height:1.75;color:#4a5573;max-width:58ch;margin-top:14px">Diseño hecho a medida y desarrollo propio, con entrega express y el plazo acordado contigo.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(14px,1.8vw,22px);margin-top:clamp(28px,3.4vw,40px)">
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;overflow:hidden;transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div data-media="web-01" data-reveal="media" style="position:relative;aspect-ratio:16/9;background:#0b1233;display:grid;place-items:center;overflow:hidden">
+            <img src="assets/web-01.jpeg" alt="Sitio web diseñado por MVD en pantalla de portátil" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,14,38,0) 46%, rgba(8,14,38,.55))"></div>
+          </div>
+          <div style="padding:clamp(20px,2.6vw,26px)">
+            <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b">01 · code</p>
+            <h4 style="font-size:1.28rem;font-weight:600;color:#15235e;margin-top:12px">Sitios web</h4>
+            <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Diseño único, responsivo y optimizado para SEO. Astro, React y CMS headless.</p>
+          </div>
+        </article>
+
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;overflow:hidden;transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div data-media="web-02" data-reveal="media" style="position:relative;aspect-ratio:16/9;background:#0b1233;display:grid;place-items:center;overflow:hidden">
+            <video src="assets/web-02.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" data-vid="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,14,38,0) 46%, rgba(8,14,38,.55))"></div>
+          </div>
+          <div style="padding:clamp(20px,2.6vw,26px)">
+            <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b">02 · film</p>
+            <h4 style="font-size:1.28rem;font-weight:600;color:#15235e;margin-top:12px">Landings cinematográficas</h4>
+            <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Páginas con video a pantalla completa, parallax y narrativa. Diseñadas para convertir.</p>
+          </div>
+        </article>
+
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;overflow:hidden;transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div data-media="web-03" data-reveal="media" style="position:relative;aspect-ratio:16/9;background:#0b1233;display:grid;place-items:center;overflow:hidden">
+            <img src="assets/web-03.jpeg" alt="Tienda online en portátil y móvil" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,14,38,0) 46%, rgba(8,14,38,.55))"></div>
+          </div>
+          <div style="padding:clamp(20px,2.6vw,26px)">
+            <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b">03 · shop</p>
+            <h4 style="font-size:1.28rem;font-weight:600;color:#15235e;margin-top:12px">E-commerce</h4>
+            <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Tiendas Shopify y a medida. Inventario, pagos, envíos y analítica listos desde el día uno.</p>
+          </div>
+        </article>
+      </div>
+
+      <article data-reveal="1" style="position:relative;overflow:hidden;margin-top:clamp(14px,1.8vw,22px);background:#0b1233;border:1px solid rgba(168,178,230,.2);border-radius:6px;padding:clamp(24px,3.4vw,42px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(22px,3vw,44px);align-items:center">
+        <div style="position:absolute;top:-60%;left:-6%;width:min(460px,60%);height:220%;background:radial-gradient(circle at 50% 50%, rgba(139,124,232,.3), rgba(139,124,232,0) 64%);pointer-events:none"></div>
+        <div style="position:relative">
+          <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:#b6acf5">04 · express</p>
+          <h4 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(1.9rem,3.2vw,2.6rem);line-height:1.02;color:#ffffff;margin-top:14px">Entrega express</h4>
+          <p style="font-size:16.5px;line-height:1.7;color:#a7adca;max-width:44ch;margin-top:12px">Tú eliges el ritmo, nosotros lo cumplimos. Definimos el plazo en el diagnóstico según el alcance.</p>
+        </div>
+        <div style="position:relative;display:flex;justify-content:flex-start;gap:12px;flex-wrap:wrap">
+          <a href="#diagnostico" class="mvd-btn" style="display:flex;align-items:center;min-height:56px;background:#8b7ce8;color:#0a1130;font-size:16px;font-weight:600;padding:0 28px;border-radius:2px;transition:background .2s ease,transform .16s cubic-bezier(0.23,1,0.32,1)" style-hover="background:#b6acf5;color:#0a1130;transform:translateY(-2px)" style-active="transform:scale(.97)">Cotizar mi web</a>
+        </div>
+      </article>
+
+      <div style="display:flex;align-items:baseline;gap:16px;margin-top:clamp(56px,7vw,96px);padding-bottom:18px;border-bottom:1px solid rgba(21,35,94,.14)">
+        <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Creative &amp; media</p>
+        <span style="flex:1"></span>
+        <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;color:#79819b">05 servicios</p>
+      </div>
+      <h3 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.05;color:#15235e;max-width:24ch;margin-top:22px">Producción, dirección creativa y redes</h3>
+      <p data-reveal="1" style="font-size:17px;line-height:1.75;color:#4a5573;max-width:58ch;margin-top:14px">Tu marca lista para vivir en pantalla: del guion a la pieza publicada.</p>
+
+      <article data-reveal="1" class="mvd-card" style="margin-top:clamp(28px,3.4vw,40px);background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));transition:border-color .2s ease,box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+        <div data-media="cine-05" data-reveal="media" style="position:relative;min-height:260px;background:#0b1233;display:grid;place-items:center;overflow:hidden">
+          <video src="assets/cine-05.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" data-vid="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,14,38,0) 42%, rgba(8,14,38,.5))"></div>
+        </div>
+        <div style="padding:clamp(24px,3.4vw,40px)">
+          <div style="display:flex;align-items:center;gap:12px">
+            <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b">05 · cine</p>
+            <span style="font-family:'Roboto Mono',monospace;font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;color:#5b4fa0;border:1px solid rgba(91,79,160,.35);border-radius:2px;padding:4px 8px">Sony ZV-E10 · 18-105 G</span>
+          </div>
+          <h4 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.04;color:#15235e;margin-top:16px">Anuncios cinematográficos</h4>
+          <p style="font-size:16.5px;line-height:1.7;color:#4a5573;max-width:48ch;margin-top:12px">Guion, dirección, cámara y post. Spots de 15 a 60 segundos para YouTube, TV e in-feed, grabados con Sony ZV-E10, óptica 18-105 G, estabilizador y audio DJI.</p>
+          <a href="#diagnostico" class="mvd-row" style="display:inline-flex;align-items:center;gap:10px;margin-top:24px;font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5b4fa0">Cotizar producción<span class="mvd-arrow" style="transition:transform .22s cubic-bezier(0.23,1,0.32,1)">→</span></a>
+        </div>
+      </article>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:clamp(14px,1.8vw,22px);margin-top:clamp(14px,1.8vw,22px)">
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;overflow:hidden;transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div data-media="drone-06" data-reveal="media" style="position:relative;aspect-ratio:16/9;background:#0b1233;display:grid;place-items:center;overflow:hidden">
+            <video src="assets/drone-06.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" data-vid="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,14,38,0) 46%, rgba(8,14,38,.55))"></div>
+          </div>
+          <div style="padding:clamp(20px,2.6vw,26px)">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b">06 · aerial</p>
+              <span style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:#5b4fa0;border:1px solid rgba(91,79,160,.3);border-radius:2px;padding:3px 7px">DJI Mini 5 Pro · 4K</span>
+            </div>
+            <h4 style="font-size:1.28rem;font-weight:600;color:#15235e;margin-top:12px">Tomas con drones</h4>
+            <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Aéreas 4K y reveals arquitectónicos con DJI Mini 5 Pro, para inmobiliarias, eventos y campañas.</p>
+          </div>
+        </article>
+
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;overflow:hidden;transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div data-media="ugc-07" data-reveal="media" style="position:relative;aspect-ratio:16/9;background:#0b1233;display:grid;place-items:center;overflow:hidden">
+            <video src="assets/ugc-07.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" data-vid="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(18px) saturate(1.1);opacity:.5"></video>
+            <div style="position:relative;height:100%;aspect-ratio:9/16;overflow:hidden;box-shadow:0 18px 40px rgba(4,8,24,.6)">
+              <video src="assets/ugc-07.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" data-vid="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+            </div>
+          </div>
+          <div style="padding:clamp(20px,2.6vw,26px)">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b">07 · ugc</p>
+              <span style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:#5b4fa0;border:1px solid rgba(91,79,160,.3);border-radius:2px;padding:3px 7px">12 piezas/mes</span>
+            </div>
+            <h4 style="font-size:1.28rem;font-weight:600;color:#15235e;margin-top:12px">Ads UGC</h4>
+            <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Casting de creadores, guiones para TikTok y Reels, y entrega masiva mes a mes.</p>
+          </div>
+        </article>
+
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;overflow:hidden;transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div data-media="art-08" data-reveal="media" style="position:relative;aspect-ratio:16/9;background:#0b1233;display:grid;place-items:center;overflow:hidden">
+            <img src="assets/art-08.jpeg" alt="Moodboard de dirección creativa" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,14,38,0) 46%, rgba(8,14,38,.5))"></div>
+          </div>
+          <div style="padding:clamp(20px,2.6vw,26px)">
+            <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b">08 · art direction</p>
+            <h4 style="font-size:1.28rem;font-weight:600;color:#15235e;margin-top:12px">Dirección creativa</h4>
+            <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Concepto, mood, paleta y copy. La idea madre detrás de cada campaña.</p>
+          </div>
+        </article>
+
+        <article data-reveal="1" class="mvd-card" style="background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;overflow:hidden;transition:border-color .2s ease,transform .24s cubic-bezier(0.23,1,0.32,1),box-shadow .24s ease" style-hover="border-color:rgba(91,79,160,.55);transform:translateY(-4px);box-shadow:0 16px 34px rgba(21,35,94,.1)">
+          <div data-media="social-09" data-reveal="media" style="position:relative;aspect-ratio:16/9;background:#0b1233;display:grid;place-items:center;overflow:hidden">
+            <img src="assets/social-09.jpeg" alt="Feed de Instagram gestionado por MVD" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,14,38,0) 46%, rgba(8,14,38,.5))"></div>
+          </div>
+          <div style="padding:clamp(20px,2.6vw,26px)">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+              <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;color:#79819b">09 · social</p>
+              <span style="font-family:'Roboto Mono',monospace;font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:#5b4fa0;border:1px solid rgba(91,79,160,.3);border-radius:2px;padding:3px 7px">mensual</span>
+            </div>
+            <h4 style="font-size:1.28rem;font-weight:600;color:#15235e;margin-top:12px">Manejo de redes</h4>
+            <p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Calendario, contenido, copy y community management en Instagram, TikTok y LinkedIn.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="meta-ads" style="position:relative;background:#080e26;overflow:hidden;scroll-margin-top:72px">
+    <div style="position:absolute;inset:0;background:radial-gradient(120% 70% at 82% 0%, rgba(139,124,232,.2), rgba(8,14,38,0) 70%);pointer-events:none"></div>
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="assets/meta-ads.png" alt="Logo de Meta Ads" style="width:24px;height:auto;display:block" />
+        <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#b6acf5">Especialidad</p>
+      </div>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#ffffff;max-width:24ch;margin-top:16px">Meta Ads: publicidad diseñada para conseguir clientes</h2>
+      <p data-reveal="1" style="font-size:18px;line-height:1.75;color:#a7adca;max-width:60ch;margin-top:18px">Este es el proceso que corremos en cada cuenta. Ninguna etapa se salta, porque cada una explica el resultado de la siguiente.</p>
+
+      <div data-reveal="media" style="position:relative;margin-top:clamp(28px,3.4vw,44px);border:1px solid rgba(168,178,230,.2);border-radius:6px;overflow:hidden;aspect-ratio:32/9;background:#0b1233">
+        <video src="assets/meta-ads-banner.mp4" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" data-vid="1" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>
+        <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(8,14,38,.82), rgba(8,14,38,.2) 58%, rgba(8,14,38,.62))"></div>
+        <p style="position:absolute;left:clamp(16px,2.4vw,30px);bottom:clamp(14px,2vw,24px);font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#b6acf5">Operación diaria de cuenta</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:{{ metaCols }};gap:clamp(32px,4vw,56px);margin-top:clamp(36px,4.4vw,60px);align-items:start">
+        <ol style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1px;background:rgba(168,178,230,.16);border:1px solid rgba(168,178,230,.16);border-radius:4px;overflow:hidden">
+          <li data-reveal="1" style="background:#0b1233;padding:clamp(18px,2.4vw,26px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1;color:#8b7ce8">01</p><h3 style="font-size:1.02rem;font-weight:600;color:#ffffff;margin-top:12px">Investigación</h3><p style="font-size:14.5px;line-height:1.6;color:#8189ad;margin-top:8px">Negocio, oferta, competencia y qué compra realmente el cliente.</p></li>
+          <li data-reveal="1" style="background:#0b1233;padding:clamp(18px,2.4vw,26px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1;color:#8b7ce8">02</p><h3 style="font-size:1.02rem;font-weight:600;color:#ffffff;margin-top:12px">Públicos</h3><p style="font-size:14.5px;line-height:1.6;color:#8189ad;margin-top:8px">Segmentos, intereses, similares y audiencias de remarketing.</p></li>
+          <li data-reveal="1" style="background:#0b1233;padding:clamp(18px,2.4vw,26px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1;color:#8b7ce8">03</p><h3 style="font-size:1.02rem;font-weight:600;color:#ffffff;margin-top:12px">Estrategia de campaña</h3><p style="font-size:14.5px;line-height:1.6;color:#8189ad;margin-top:8px">Objetivo, estructura, presupuesto y ruta de conversión.</p></li>
+          <li data-reveal="1" style="background:#0b1233;padding:clamp(18px,2.4vw,26px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1;color:#8b7ce8">04</p><h3 style="font-size:1.02rem;font-weight:600;color:#ffffff;margin-top:12px">Creatividades</h3><p style="font-size:14.5px;line-height:1.6;color:#8189ad;margin-top:8px">Piezas y textos construidos para cumplir una función, no para decorar.</p></li>
+          <li data-reveal="1" style="background:#0b1233;padding:clamp(18px,2.4vw,26px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1;color:#8b7ce8">05</p><h3 style="font-size:1.02rem;font-weight:600;color:#ffffff;margin-top:12px">Implementación</h3><p style="font-size:14.5px;line-height:1.6;color:#8189ad;margin-top:8px">Píxel, eventos, conversiones, catálogos y activos en orden.</p></li>
+          <li data-reveal="1" style="background:#0b1233;padding:clamp(18px,2.4vw,26px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1;color:#8b7ce8">06</p><h3 style="font-size:1.02rem;font-weight:600;color:#ffffff;margin-top:12px">Optimización</h3><p style="font-size:14.5px;line-height:1.6;color:#8189ad;margin-top:8px">Ajustes de puja, público y creatividad según el costo por resultado.</p></li>
+          <li data-reveal="1" style="background:#0b1233;padding:clamp(18px,2.4vw,26px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1;color:#b98fd6">07</p><h3 style="font-size:1.02rem;font-weight:600;color:#ffffff;margin-top:12px">Análisis</h3><p style="font-size:14.5px;line-height:1.6;color:#8189ad;margin-top:8px">Lectura de datos y aprendizajes que quedan documentados.</p></li>
+          <li data-reveal="1" style="background:#0b1233;padding:clamp(18px,2.4vw,26px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.9rem;line-height:1;color:#b98fd6">08</p><h3 style="font-size:1.02rem;font-weight:600;color:#ffffff;margin-top:12px">Escalamiento</h3><p style="font-size:14.5px;line-height:1.6;color:#8189ad;margin-top:8px">Más presupuesto donde el número ya aguanta más presupuesto.</p></li>
+        </ol>
+
+        <div data-reveal="scale" style="background:#101a41;border:1px solid rgba(168,178,230,.18);border-radius:6px;overflow:hidden;box-shadow:0 30px 70px rgba(4,8,24,.5)">
+          <div style="display:flex;align-items:center;gap:10px;padding:14px 16px;background:#0b1233;border-bottom:1px solid rgba(168,178,230,.16)">
+            <span style="flex:none;width:7px;height:7px;border-radius:50%;background:#5fd0b0;box-shadow:0 0 12px rgba(95,208,176,.7);animation:mvdBlink 2.4s ease-in-out infinite"></span><span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:#a7adca">Conjuntos de anuncios</span>
+            <span style="flex:1"></span>
+            <span style="font-family:'Roboto Mono',monospace;font-size:10px;color:#5fd0b0">Activos 3</span>
+          </div>
+          <div style="padding:6px 16px 16px">
+            <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px 12px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(168,178,230,.14)">
+              <span style="font-size:14.5px;color:#eef0fb">Remarketing 30 días</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:#a7adca">$4.100</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#5fd0b0">−34%</span>
+              <span class="mvd-grow" style="grid-column:1/-1;display:block;height:3px;width:92%;background:linear-gradient(90deg,#8b7ce8,#b98fd6);border-radius:99px"></span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px 12px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(168,178,230,.14)">
+              <span style="font-size:14.5px;color:#eef0fb">Intereses · hogar</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:#a7adca">$6.800</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#5fd0b0">−8%</span>
+              <span class="mvd-grow" style="grid-column:1/-1;display:block;height:3px;width:58%;background:rgba(139,124,232,.6);border-radius:99px"></span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px 12px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(168,178,230,.14)">
+              <span style="font-size:14.5px;color:#eef0fb">Similares 1% compradores</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:#a7adca">$7.400</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#b98fd6">+2%</span>
+              <span class="mvd-grow" style="grid-column:1/-1;display:block;height:3px;width:48%;background:rgba(139,124,232,.45);border-radius:99px"></span>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr auto auto;gap:8px 12px;align-items:center;padding:14px 0;opacity:.5">
+              <span style="font-size:14.5px;color:#eef0fb">Creatividad 3 · pausada</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;color:#a7adca">$12.900</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#e0776a">+58%</span>
+              <span class="mvd-grow" style="grid-column:1/-1;display:block;height:3px;width:22%;background:rgba(224,119,106,.55);border-radius:99px"></span>
+            </div>
+          </div>
+          <div style="padding:16px;background:#0b1233;border-top:1px solid rgba(168,178,230,.16)">
+            <p style="font-family:'Roboto Mono',monospace;font-size:9.5px;letter-spacing:1.8px;text-transform:uppercase;color:#6f7799">Decisión de la semana</p>
+            <p style="font-size:14.5px;line-height:1.6;color:#a7adca;margin-top:10px">Presupuesto del conjunto pausado se traslada a remarketing. Se lanzan dos variantes de creatividad con el ángulo que mejor convierte.</p>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:14px;line-height:1.7;color:#6f7799;max-width:70ch;margin-top:22px">Los paneles reflejan la operación real de una cuenta gestionada por MVD. Los datos completos se revisan contigo en la llamada de diagnóstico.</p>
+    </div>
+  </section>
+
+  <section style="background:#faf9f7;border-bottom:1px solid rgba(21,35,94,.12);overflow:hidden">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(16px,5vw,44px) 0">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Ecosistema</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.1rem,4.2vw,3.2rem);line-height:1.05;letter-spacing:-.01em;color:#15235e;max-width:26ch;margin-top:16px">Las herramientas que usamos para hacer crecer tu negocio</h2>
+    </div>
+    <div style="margin-top:clamp(32px,4vw,52px);padding-bottom:clamp(56px,7vw,96px);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)">
+      <div class="mvd-rail" style="display:flex;gap:14px;width:max-content;animation:mvdRail 34s linear infinite">
+        <sc-for list="{{ rail }}" as="item" hint-placeholder-count="14">
+          <span style="display:flex;align-items:center;gap:10px;font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:1.6px;text-transform:uppercase;color:#4a5573;background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:3px;padding:15px 22px;white-space:nowrap">{{ item }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="proceso" style="position:relative;background:#0b1233;overflow:hidden;scroll-margin-top:72px">
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#b6acf5">Cadena de adquisición</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#ffffff;max-width:24ch;margin-top:16px">Una campaña no termina cuando alguien hace clic</h2>
+      <div style="display:grid;gap:0;margin-top:clamp(36px,4.4vw,60px);max-width:960px">
+        <div data-reveal="1" class="mvd-row" style="display:grid;grid-template-columns:{{ chainCols }};gap:clamp(12px,3vw,40px);align-items:baseline;padding:clamp(18px,2.4vw,26px) 0;border-top:1px solid rgba(168,178,230,.16)">
+          <h3 style="display:flex;align-items:center;gap:10px;font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#8b7ce8"><span class="mvd-dash" style="width:16px;height:1px;background:#8b7ce8"></span>Estrategia</h3>
+          <p style="font-size:17px;line-height:1.7;color:#a7adca">Definimos a quién le hablamos, con qué oferta y hacia dónde lo llevamos.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="display:grid;grid-template-columns:{{ chainCols }};gap:clamp(12px,3vw,40px);align-items:baseline;padding:clamp(18px,2.4vw,26px) 0;border-top:1px solid rgba(168,178,230,.16)">
+          <h3 style="display:flex;align-items:center;gap:10px;font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#8b7ce8"><span class="mvd-dash" style="width:16px;height:1px;background:#8b7ce8"></span>Captación</h3>
+          <p style="font-size:17px;line-height:1.7;color:#a7adca">Las campañas ponen el mensaje frente a quien puede comprarlo.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="display:grid;grid-template-columns:{{ chainCols }};gap:clamp(12px,3vw,40px);align-items:baseline;padding:clamp(18px,2.4vw,26px) 0;border-top:1px solid rgba(168,178,230,.16)">
+          <h3 style="display:flex;align-items:center;gap:10px;font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#8b7ce8"><span class="mvd-dash" style="width:16px;height:1px;background:#8b7ce8"></span>Conversión</h3>
+          <p style="font-size:17px;line-height:1.7;color:#a7adca">El interés se transforma en un contacto real: mensaje, formulario o llamada.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="display:grid;grid-template-columns:{{ chainCols }};gap:clamp(12px,3vw,40px);align-items:baseline;padding:clamp(18px,2.4vw,26px) 0;border-top:1px solid rgba(168,178,230,.16)">
+          <h3 style="display:flex;align-items:center;gap:10px;font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#b98fd6"><span class="mvd-dash" style="width:16px;height:1px;background:#b98fd6"></span>Seguimiento</h3>
+          <p style="font-size:17px;line-height:1.7;color:#a7adca">Ese contacto se atiende rápido y con un guion, porque ahí se pierde la mayoría de las ventas.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="display:grid;grid-template-columns:{{ chainCols }};gap:clamp(12px,3vw,40px);align-items:baseline;padding:clamp(18px,2.4vw,26px) 0;border-top:1px solid rgba(168,178,230,.16)">
+          <h3 style="display:flex;align-items:center;gap:10px;font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#b98fd6"><span class="mvd-dash" style="width:16px;height:1px;background:#b98fd6"></span>Optimización</h3>
+          <p style="font-size:17px;line-height:1.7;color:#a7adca">Lo que aprendimos vuelve a la campaña y corrige el rumbo.</p>
+        </div>
+        <div data-reveal="1" class="mvd-row" style="display:grid;grid-template-columns:{{ chainCols }};gap:clamp(12px,3vw,40px);align-items:baseline;padding:clamp(18px,2.4vw,26px) 0;border-top:1px solid rgba(168,178,230,.16);border-bottom:1px solid rgba(168,178,230,.16)">
+          <h3 style="display:flex;align-items:center;gap:10px;font-family:'Roboto Mono',monospace;font-size:12px;letter-spacing:2.4px;text-transform:uppercase;font-weight:500;color:#b98fd6"><span class="mvd-dash" style="width:16px;height:1px;background:#b98fd6"></span>Escalamiento</h3>
+          <p style="font-size:17px;line-height:1.7;color:#a7adca">Cuando el costo por cliente es rentable y estable, crecemos la inversión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f2f0ea;border-bottom:1px solid rgba(21,35,94,.12)">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Cómo trabajamos</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#15235e;max-width:20ch;margin-top:16px">De la estrategia al resultado</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(22px,3vw,40px);margin-top:clamp(36px,4.4vw,60px)">
+        <div data-reveal="1"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:3rem;line-height:1;color:#cfd4e4">01</p><h3 style="font-size:1.16rem;font-weight:600;color:#15235e;margin-top:10px">Diagnóstico</h3><p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Analizamos negocio, mercado, público y la situación actual de la cuenta.</p></div>
+        <div data-reveal="1"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:3rem;line-height:1;color:#cfd4e4">02</p><h3 style="font-size:1.16rem;font-weight:600;color:#15235e;margin-top:10px">Estrategia</h3><p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Definimos objetivos, canales, campañas y mensajes con presupuesto asignado.</p></div>
+        <div data-reveal="1"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:3rem;line-height:1;color:#cfd4e4">03</p><h3 style="font-size:1.16rem;font-weight:600;color:#15235e;margin-top:10px">Implementación</h3><p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Configuramos campañas, públicos, conversiones y todos los activos.</p></div>
+        <div data-reveal="1"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:3rem;line-height:1;color:#cfd4e4">04</p><h3 style="font-size:1.16rem;font-weight:600;color:#15235e;margin-top:10px">Optimización</h3><p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Leemos el comportamiento y ajustamos de forma continua, no una vez al mes.</p></div>
+        <div data-reveal="1"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:3rem;line-height:1;color:#cfd4e4">05</p><h3 style="font-size:1.16rem;font-weight:600;color:#15235e;margin-top:10px">Reporte</h3><p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Presentamos resultados y aprendizajes en lenguaje de negocio.</p></div>
+        <div data-reveal="1"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:3rem;line-height:1;color:#5b4fa0">06</p><h3 style="font-size:1.16rem;font-weight:600;color:#15235e;margin-top:10px">Escalamiento</h3><p style="font-size:16px;line-height:1.7;color:#4a5573;margin-top:10px">Identificamos dónde hay margen para crecer y lo ejecutamos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resultados" style="background:#faf9f7;border-bottom:1px solid rgba(21,35,94,.12);scroll-margin-top:72px">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Casos de éxito</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#15235e;max-width:22ch;margin-top:16px">Resultados que se pueden auditar</h2>
+
+      <article data-reveal="scale" style="margin-top:clamp(34px,4.4vw,56px);border:1px solid rgba(21,35,94,.12);border-radius:6px;background:#ffffff;overflow:hidden">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))">
+          <div style="padding:clamp(24px,3.4vw,44px)">
+            <h3 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1;letter-spacing:.02em;text-transform:uppercase;color:#15235e">D'Fibras</h3>
+            <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7a4fa6;margin-top:12px">Meta Ads + WhatsApp</p>
+            <div style="display:grid;gap:18px;margin-top:clamp(22px,3vw,32px)">
+              <div><p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#79819b">Objetivo</p><p style="font-size:16px;line-height:1.65;color:#15235e;margin-top:6px">Generación constante de clientes potenciales para el equipo comercial.</p></div>
+              <div><p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#79819b">Estrategia</p><p style="font-size:16px;line-height:1.65;color:#15235e;margin-top:6px">Campañas de mensajes a WhatsApp con públicos segmentados y remarketing sobre quienes ya interactuaron.</p></div>
+              <div><p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#79819b">Optimización</p><p style="font-size:16px;line-height:1.65;color:#15235e;margin-top:6px">Pruebas de creatividad y mensaje semana a semana, recortando lo que subía el costo por conversación.</p></div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;background:rgba(21,35,94,.12);gap:1px;border-left:1px solid rgba(21,35,94,.12)">
+            <div style="background:#ffffff;padding:clamp(20px,2.6vw,30px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;color:#5b4fa0"><span data-count="340">0</span></p><p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4a5573;margin-top:8px">Leads generados</p></div>
+            <div style="background:#ffffff;padding:clamp(20px,2.6vw,30px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;color:#5b4fa0">$<span data-count="6200" data-format="mil">0</span></p><p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4a5573;margin-top:8px">Costo por lead (COP)</p></div>
+            <div style="background:#ffffff;padding:clamp(20px,2.6vw,30px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;color:#5b4fa0">$2.1M</p><p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4a5573;margin-top:8px">Inversión (COP)</p></div>
+            <div style="background:#ffffff;padding:clamp(20px,2.6vw,30px)"><p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;color:#7a4fa6"><span data-count="21">0</span>%</p><p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#4a5573;margin-top:8px">Conversión a venta</p></div>
+          </div>
+        </div>
+      </article>
+      <p style="font-size:15px;line-height:1.7;color:#79819b;max-width:70ch;margin-top:18px">Los datos se comparten con autorización del cliente. Podemos mostrar el detalle de la cuenta en la llamada de diagnóstico.</p>
+
+    </div>
+  </section>
+
+  <section id="resenas" style="background:#f2f0ea;border-bottom:1px solid rgba(21,35,94,.12);scroll-margin-top:72px">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Reseñas</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#15235e;max-width:22ch;margin-top:16px">Lo que dicen los clientes</h2>
+      <p data-reveal="1" style="font-size:18px;line-height:1.75;color:#4a5573;max-width:60ch;margin-top:18px">Seis empresas en Colombia y Australia. Cada una nos contrató para un frente distinto: pauta, web, identidad, contenido.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:clamp(18px,2.4vw,28px);margin-top:clamp(34px,4.4vw,56px)">
+        <figure data-reveal="1" style="display:flex;flex-direction:column;background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(24px,3vw,32px);margin:0">
+          <p style="font-size:13px;letter-spacing:3px;color:#c8a24a;line-height:1">★★★★★</p>
+          <blockquote style="font-size:17px;line-height:1.72;color:#15235e;margin:18px 0 0">"Trabajar con MVD Manager Digital nos ayudó a darle una imagen mucho más profesional a nuestra empresa. Mejoraron nuestra presencia en redes sociales y nos apoyaron con la gestión de campañas publicitarias, logrando una mayor visibilidad y mejores oportunidades de venta. Estamos muy satisfechos con el resultado."</blockquote>
+          <figcaption style="margin-top:auto;padding-top:22px">
+            <div style="padding-top:18px;border-top:1px solid rgba(21,35,94,.12)">
+              <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.5rem;line-height:1;letter-spacing:.02em;text-transform:uppercase;color:#15235e">D'Fibras SAS</p>
+              <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7a4fa6;margin-top:8px">Redes sociales · Meta Ads</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure data-reveal="1" style="display:flex;flex-direction:column;background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(24px,3vw,32px);margin:0">
+          <p style="font-size:13px;letter-spacing:3px;color:#c8a24a;line-height:1">★★★★★</p>
+          <blockquote style="font-size:17px;line-height:1.72;color:#15235e;margin:18px 0 0">"Estamos muy satisfechos con el trabajo realizado por MVD Manager Digital. Desarrollaron módulos de video utilizando inteligencia artificial para nuestros cursos online, logrando un resultado profesional, innovador y adaptado a nuestro objetivo de llegar a un público internacional. Fue una excelente experiencia trabajar con ellos."</blockquote>
+          <figcaption style="margin-top:auto;padding-top:22px">
+            <div style="padding-top:18px;border-top:1px solid rgba(21,35,94,.12)">
+              <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.5rem;line-height:1;letter-spacing:.02em;text-transform:uppercase;color:#15235e">Stunet Australia</p>
+              <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7a4fa6;margin-top:8px">Video con IA · Cursos online</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure data-reveal="1" style="display:flex;flex-direction:column;background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(24px,3vw,32px);margin:0">
+          <p style="font-size:13px;letter-spacing:3px;color:#c8a24a;line-height:1">★★★★★</p>
+          <blockquote style="font-size:17px;line-height:1.72;color:#15235e;margin:18px 0 0">"MVD Manager Digital llevó nuestra presencia digital a otro nivel. Crearon nuestra página web desde cero con un concepto cinematográfico y un rediseño de nuestra identidad visual que logró transmitir mucho mejor la calidad de nuestra empresa. El resultado superó nuestras expectativas."</blockquote>
+          <figcaption style="margin-top:auto;padding-top:22px">
+            <div style="padding-top:18px;border-top:1px solid rgba(21,35,94,.12)">
+              <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.5rem;line-height:1;letter-spacing:.02em;text-transform:uppercase;color:#15235e">JM Flooring</p>
+              <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7a4fa6;margin-top:8px">Web + identidad visual</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure data-reveal="1" style="display:flex;flex-direction:column;background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(24px,3vw,32px);margin:0">
+          <p style="font-size:13px;letter-spacing:3px;color:#c8a24a;line-height:1">★★★★★</p>
+          <blockquote style="font-size:17px;line-height:1.72;color:#15235e;margin:18px 0 0">"Con MVD Manager Digital logramos conectar correctamente nuestras redes sociales y preparar nuestra presencia digital para desarrollar campañas publicitarias en Meta Ads. El acompañamiento durante el proceso fue muy profesional y nos permitió tener una estructura mucho más organizada para promocionar nuestros servicios."</blockquote>
+          <figcaption style="margin-top:auto;padding-top:22px">
+            <div style="padding-top:18px;border-top:1px solid rgba(21,35,94,.12)">
+              <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.5rem;line-height:1;letter-spacing:.02em;text-transform:uppercase;color:#15235e">Moonbeauty</p>
+              <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7a4fa6;margin-top:8px">Setup técnico · Meta Ads</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure data-reveal="1" style="display:flex;flex-direction:column;background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(24px,3vw,32px);margin:0">
+          <p style="font-size:13px;letter-spacing:3px;color:#c8a24a;line-height:1">★★★★★</p>
+          <blockquote style="font-size:17px;line-height:1.72;color:#15235e;margin:18px 0 0">"Estamos muy contentos con el trabajo de MVD Manager Digital. Nos ayudaron con el manejo de nuestras redes sociales, la creación de contenido y el desarrollo de nuestra identidad de marca. Gracias a su trabajo, nuestra comunicación digital se siente mucho más profesional y conectada con nuestros clientes."</blockquote>
+          <figcaption style="margin-top:auto;padding-top:22px">
+            <div style="padding-top:18px;border-top:1px solid rgba(21,35,94,.12)">
+              <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.5rem;line-height:1;letter-spacing:.02em;text-transform:uppercase;color:#15235e">Sampa Pizzería</p>
+              <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7a4fa6;margin-top:8px">Australia · Contenido + marca</p>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure data-reveal="1" style="display:flex;flex-direction:column;background:#ffffff;border:1px solid rgba(21,35,94,.12);border-radius:4px;padding:clamp(24px,3vw,32px);margin:0">
+          <p style="font-size:13px;letter-spacing:3px;color:#c8a24a;line-height:1">★★★★★</p>
+          <blockquote style="font-size:17px;line-height:1.72;color:#15235e;margin:18px 0 0">"MVD Manager Digital nos ayudó a construir una identidad visual profesional para nuestra empresa. Entendieron lo que queríamos transmitir y lograron convertir nuestra idea en una imagen de marca sólida y atractiva. Estamos muy satisfechos con el resultado y con la atención recibida durante todo el proceso."</blockquote>
+          <figcaption style="margin-top:auto;padding-top:22px">
+            <div style="padding-top:18px;border-top:1px solid rgba(21,35,94,.12)">
+              <p style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.5rem;line-height:1;letter-spacing:.02em;text-transform:uppercase;color:#15235e">JC Flores Construction</p>
+              <p style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7a4fa6;margin-top:8px">Identidad de marca</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" style="background:#080e26;position:relative;overflow:hidden;scroll-margin-top:72px">
+    <div data-par="0.2" style="position:absolute;bottom:-30%;right:-6%;width:min(560px,80vw);height:min(560px,80vw);border-radius:50%;background:radial-gradient(circle at 50% 50%, rgba(185,143,214,.22), rgba(185,143,214,0) 66%);pointer-events:none;will-change:transform"></div>
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#b6acf5">Diferencial</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#ffffff;margin-top:16px">¿Por qué MVD?</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:1px;background:rgba(168,178,230,.16);border:1px solid rgba(168,178,230,.16);border-radius:4px;overflow:hidden;margin-top:clamp(34px,4.4vw,56px)">
+        <div data-reveal="1" class="mvd-lit" style="position:relative;overflow:hidden;background:#0b1233;padding:clamp(24px,3vw,34px);transition:background .24s ease" style-hover="background:#131c45"><h3 style="font-size:1.1rem;font-weight:600;color:#b6acf5">Estrategia antes que publicidad</h3><p style="font-size:16px;line-height:1.75;color:#a7adca;margin-top:10px">No arrancamos campañas sin entender el negocio, el cliente y el objetivo comercial.</p></div>
+        <div data-reveal="1" class="mvd-lit" style="position:relative;overflow:hidden;background:#0b1233;padding:clamp(24px,3vw,34px);transition:background .24s ease" style-hover="background:#131c45"><h3 style="font-size:1.1rem;font-weight:600;color:#b6acf5">Publicidad orientada a resultados</h3><p style="font-size:16px;line-height:1.75;color:#a7adca;margin-top:10px">Alcance e impresiones no pagan la nómina. Miramos leads, costo y cierre.</p></div>
+        <div data-reveal="1" class="mvd-lit" style="position:relative;overflow:hidden;background:#0b1233;padding:clamp(24px,3vw,34px);transition:background .24s ease" style-hover="background:#131c45"><h3 style="font-size:1.1rem;font-weight:600;color:#b6acf5">Optimización continua</h3><p style="font-size:16px;line-height:1.75;color:#a7adca;margin-top:10px">Revisamos los datos y ajustamos durante la semana, no cuando termina el mes.</p></div>
+        <div data-reveal="1" class="mvd-lit" style="position:relative;overflow:hidden;background:#0b1233;padding:clamp(24px,3vw,34px);transition:background .24s ease" style-hover="background:#131c45"><h3 style="font-size:1.1rem;font-weight:600;color:#b6acf5">Creatividad que vende</h3><p style="font-size:16px;line-height:1.75;color:#a7adca;margin-top:10px">Cada pieza cumple una función dentro de la estrategia. Verse bien es el mínimo, no el objetivo.</p></div>
+        <div data-reveal="1" class="mvd-lit" style="position:relative;overflow:hidden;background:#0b1233;padding:clamp(24px,3vw,34px);transition:background .24s ease" style-hover="background:#131c45"><h3 style="font-size:1.1rem;font-weight:600;color:#b6acf5">Datos para decidir</h3><p style="font-size:16px;line-height:1.75;color:#a7adca;margin-top:10px">Convertimos resultados en información útil: qué mantener, qué cambiar, dónde invertir.</p></div>
+        <div data-reveal="1" class="mvd-lit" style="position:relative;overflow:hidden;background:#0b1233;padding:clamp(24px,3vw,34px);transition:background .24s ease" style-hover="background:#131c45"><h3 style="font-size:1.1rem;font-weight:600;color:#b6acf5">Acompañamiento directo</h3><p style="font-size:16px;line-height:1.75;color:#a7adca;margin-top:10px">Hablas con quien opera tu cuenta. Sabes qué se está haciendo y por qué.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#faf9f7;border-bottom:1px solid rgba(21,35,94,.12)">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px)">
+      <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Métricas</p>
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#15235e;max-width:20ch;margin-top:16px">No medimos likes. Medimos negocio.</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1px;margin-top:clamp(34px,4.4vw,56px);background:rgba(21,35,94,.12);border:1px solid rgba(21,35,94,.12)">
+        <div data-reveal="1" style="background:#ffffff;padding:clamp(22px,3vw,30px)"><div class="mvd-spark" style="display:flex;align-items:flex-end;gap:4px;height:34px;margin-bottom:16px"><span style="flex:1;height:38%;background:rgba(91,79,160,.2);border-radius:1px"></span><span style="flex:1;height:62%;background:rgba(91,79,160,.28);border-radius:1px"></span><span style="flex:1;height:48%;background:rgba(91,79,160,.24);border-radius:1px"></span><span style="flex:1;height:84%;background:rgba(91,79,160,.42);border-radius:1px"></span><span style="flex:1;height:100%;background:#5b4fa0;border-radius:1px"></span></div><h3 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.75rem;line-height:1;color:#15235e">Leads</h3><p style="font-size:15px;line-height:1.65;color:#4a5573;margin-top:12px">Cuántas personas interesadas conseguimos.</p></div>
+        <div data-reveal="1" style="background:#ffffff;padding:clamp(22px,3vw,30px)"><div class="mvd-spark" style="display:flex;align-items:flex-end;gap:4px;height:34px;margin-bottom:16px"><span style="flex:1;height:38%;background:rgba(91,79,160,.2);border-radius:1px"></span><span style="flex:1;height:62%;background:rgba(91,79,160,.28);border-radius:1px"></span><span style="flex:1;height:48%;background:rgba(91,79,160,.24);border-radius:1px"></span><span style="flex:1;height:84%;background:rgba(91,79,160,.42);border-radius:1px"></span><span style="flex:1;height:100%;background:#5b4fa0;border-radius:1px"></span></div><h3 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.75rem;line-height:1;color:#15235e">CPL</h3><p style="font-size:15px;line-height:1.65;color:#4a5573;margin-top:12px">Cuánto cuesta conseguir cada prospecto.</p></div>
+        <div data-reveal="1" style="background:#ffffff;padding:clamp(22px,3vw,30px)"><div class="mvd-spark" style="display:flex;align-items:flex-end;gap:4px;height:34px;margin-bottom:16px"><span style="flex:1;height:38%;background:rgba(91,79,160,.2);border-radius:1px"></span><span style="flex:1;height:62%;background:rgba(91,79,160,.28);border-radius:1px"></span><span style="flex:1;height:48%;background:rgba(91,79,160,.24);border-radius:1px"></span><span style="flex:1;height:84%;background:rgba(91,79,160,.42);border-radius:1px"></span><span style="flex:1;height:100%;background:#5b4fa0;border-radius:1px"></span></div><h3 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.75rem;line-height:1;color:#15235e">CTR</h3><p style="font-size:15px;line-height:1.65;color:#4a5573;margin-top:12px">Qué tan bien está funcionando el anuncio.</p></div>
+        <div data-reveal="1" style="background:#ffffff;padding:clamp(22px,3vw,30px)"><div class="mvd-spark" style="display:flex;align-items:flex-end;gap:4px;height:34px;margin-bottom:16px"><span style="flex:1;height:38%;background:rgba(91,79,160,.2);border-radius:1px"></span><span style="flex:1;height:62%;background:rgba(91,79,160,.28);border-radius:1px"></span><span style="flex:1;height:48%;background:rgba(91,79,160,.24);border-radius:1px"></span><span style="flex:1;height:84%;background:rgba(91,79,160,.42);border-radius:1px"></span><span style="flex:1;height:100%;background:#5b4fa0;border-radius:1px"></span></div><h3 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.75rem;line-height:1;color:#15235e">CPA</h3><p style="font-size:15px;line-height:1.65;color:#4a5573;margin-top:12px">Cuánto cuesta conseguir una conversión.</p></div>
+        <div data-reveal="1" style="background:#ffffff;padding:clamp(22px,3vw,30px)"><div class="mvd-spark" style="display:flex;align-items:flex-end;gap:4px;height:34px;margin-bottom:16px"><span style="flex:1;height:38%;background:rgba(91,79,160,.2);border-radius:1px"></span><span style="flex:1;height:62%;background:rgba(91,79,160,.28);border-radius:1px"></span><span style="flex:1;height:48%;background:rgba(91,79,160,.24);border-radius:1px"></span><span style="flex:1;height:84%;background:rgba(91,79,160,.42);border-radius:1px"></span><span style="flex:1;height:100%;background:#5b4fa0;border-radius:1px"></span></div><h3 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.75rem;line-height:1;color:#15235e">ROAS</h3><p style="font-size:15px;line-height:1.65;color:#4a5573;margin-top:12px">Cuánto retorno genera la inversión.</p></div>
+        <div data-reveal="1" style="background:#ffffff;padding:clamp(22px,3vw,30px)"><div class="mvd-spark" style="display:flex;align-items:flex-end;gap:4px;height:34px;margin-bottom:16px"><span style="flex:1;height:38%;background:rgba(91,79,160,.2);border-radius:1px"></span><span style="flex:1;height:62%;background:rgba(91,79,160,.28);border-radius:1px"></span><span style="flex:1;height:48%;background:rgba(91,79,160,.24);border-radius:1px"></span><span style="flex:1;height:84%;background:rgba(91,79,160,.42);border-radius:1px"></span><span style="flex:1;height:100%;background:#5b4fa0;border-radius:1px"></span></div><h3 style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:1.75rem;line-height:1;color:#15235e">Conversión</h3><p style="font-size:15px;line-height:1.65;color:#4a5573;margin-top:12px">Cuántos usuarios hacen la acción que buscamos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="background:#f2f0ea;border-bottom:1px solid rgba(21,35,94,.12);scroll-margin-top:72px">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(30px,5vw,72px)">
+      <div>
+        <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5b4fa0">Preguntas frecuentes</p>
+        <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#15235e;max-width:16ch;margin-top:16px">Antes de que preguntes</h2>
+        <p style="font-size:17px;line-height:1.75;color:#4a5573;max-width:44ch;margin-top:18px">Si tu duda no está acá, escríbenos. La respondemos sin compromiso.</p>
+      </div>
+      <div>
+        <details style="border-top:1px solid rgba(21,35,94,.14)"><summary style="display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:16px 0;font-size:17px;font-weight:500;color:#15235e">¿Cuánto debo invertir en publicidad?<span class="mvd-plus" style="flex:none;color:#5b4fa0;font-size:22px;line-height:1;transition:transform .22s cubic-bezier(0.2,0.8,0.2,1)">+</span></summary><p style="font-size:16px;line-height:1.75;color:#4a5573;padding-bottom:20px;max-width:60ch">Depende del objetivo, el ticket de tu producto y el mercado. En el diagnóstico definimos un presupuesto mínimo que permita aprender rápido sin quemar plata.</p></details>
+        <details style="border-top:1px solid rgba(21,35,94,.14)"><summary style="display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:16px 0;font-size:17px;font-weight:500;color:#15235e">¿MVD trabaja solamente con Meta Ads?<span class="mvd-plus" style="flex:none;color:#5b4fa0;font-size:22px;line-height:1;transition:transform .22s cubic-bezier(0.2,0.8,0.2,1)">+</span></summary><p style="font-size:16px;line-height:1.75;color:#4a5573;padding-bottom:20px;max-width:60ch">Meta Ads es nuestra especialidad, pero también trabajamos Google Ads, landing pages, automatización y analítica.</p></details>
+        <details style="border-top:1px solid rgba(21,35,94,.14)"><summary style="display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:16px 0;font-size:17px;font-weight:500;color:#15235e">¿Necesito tener una página web?<span class="mvd-plus" style="flex:none;color:#5b4fa0;font-size:22px;line-height:1;transition:transform .22s cubic-bezier(0.2,0.8,0.2,1)">+</span></summary><p style="font-size:16px;line-height:1.75;color:#4a5573;padding-bottom:20px;max-width:60ch">No es obligatorio. Se puede empezar con campañas a WhatsApp o con una landing page que desarrollamos nosotros.</p></details>
+        <details style="border-top:1px solid rgba(21,35,94,.14)"><summary style="display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:16px 0;font-size:17px;font-weight:500;color:#15235e">¿Ustedes crean las campañas y las creatividades?<span class="mvd-plus" style="flex:none;color:#5b4fa0;font-size:22px;line-height:1;transition:transform .22s cubic-bezier(0.2,0.8,0.2,1)">+</span></summary><p style="font-size:16px;line-height:1.75;color:#4a5573;padding-bottom:20px;max-width:60ch">Sí. Armamos la estructura de campaña, los públicos, los textos y las piezas publicitarias.</p></details>
+        <details style="border-top:1px solid rgba(21,35,94,.14)"><summary style="display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:16px 0;font-size:17px;font-weight:500;color:#15235e">¿Cuánto tarda una campaña en generar resultados?<span class="mvd-plus" style="flex:none;color:#5b4fa0;font-size:22px;line-height:1;transition:transform .22s cubic-bezier(0.2,0.8,0.2,1)">+</span></summary><p style="font-size:16px;line-height:1.75;color:#4a5573;padding-bottom:20px;max-width:60ch">Suelen aparecer contactos en los primeros días, pero los primeros 30 días son de aprendizaje y ajuste. Los resultados estables llegan cuando la campaña sale de esa fase.</p></details>
+        <details style="border-top:1px solid rgba(21,35,94,.14)"><summary style="display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:16px 0;font-size:17px;font-weight:500;color:#15235e">¿Cómo recibo los reportes?<span class="mvd-plus" style="flex:none;color:#5b4fa0;font-size:22px;line-height:1;transition:transform .22s cubic-bezier(0.2,0.8,0.2,1)">+</span></summary><p style="font-size:16px;line-height:1.75;color:#4a5573;padding-bottom:20px;max-width:60ch">Reporte mensual con las métricas de negocio y aprendizajes, más seguimiento por WhatsApp durante el mes.</p></details>
+        <details style="border-top:1px solid rgba(21,35,94,.14)"><summary style="display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:16px 0;font-size:17px;font-weight:500;color:#15235e">¿Puedo empezar solamente con Meta Ads?<span class="mvd-plus" style="flex:none;color:#5b4fa0;font-size:22px;line-height:1;transition:transform .22s cubic-bezier(0.2,0.8,0.2,1)">+</span></summary><p style="font-size:16px;line-height:1.75;color:#4a5573;padding-bottom:20px;max-width:60ch">Sí, y es lo más común. Después se agregan los otros canales si el negocio lo pide.</p></details>
+        <details style="border-top:1px solid rgba(21,35,94,.14)"><summary style="display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:16px 0;font-size:17px;font-weight:500;color:#15235e">¿Trabajan con empresas de otros países?<span class="mvd-plus" style="flex:none;color:#5b4fa0;font-size:22px;line-height:1;transition:transform .22s cubic-bezier(0.2,0.8,0.2,1)">+</span></summary><p style="font-size:16px;line-height:1.75;color:#4a5573;padding-bottom:20px;max-width:60ch">Sí. Trabajamos en remoto con negocios de toda Latinoamérica.</p></details>
+        <details style="border-top:1px solid rgba(21,35,94,.14);border-bottom:1px solid rgba(21,35,94,.14)"><summary style="display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:56px;padding:16px 0;font-size:17px;font-weight:500;color:#15235e">¿Cuál es la diferencia entre Meta Ads y Google Ads?<span class="mvd-plus" style="flex:none;color:#5b4fa0;font-size:22px;line-height:1;transition:transform .22s cubic-bezier(0.2,0.8,0.2,1)">+</span></summary><p style="font-size:16px;line-height:1.75;color:#4a5573;padding-bottom:20px;max-width:60ch">Meta genera demanda: le muestra tu oferta a quien todavía no te busca. Google captura demanda: aparece cuando alguien ya está buscando. Se complementan.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="diagnostico" style="background:#0b1233;scroll-margin-top:72px">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(16px,5vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(30px,5vw,68px)">
+      <div>
+        <p data-reveal="1" style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#b6acf5">Diagnóstico gratuito</p>
+        <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:600;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.02;letter-spacing:-.01em;color:#ffffff;max-width:18ch;margin-top:16px">Cuéntanos sobre tu negocio</h2>
+        <p style="font-size:17px;line-height:1.75;color:#a7adca;max-width:46ch;margin-top:18px">Con estos datos preparamos la llamada antes de hablar contigo: revisamos tu cuenta, tu competencia y qué haríamos primero.</p>
+        <ul style="display:grid;gap:14px;margin-top:clamp(24px,3vw,36px)">
+          <li style="display:flex;gap:12px;font-size:16px;color:#eef0fb"><span style="color:#8b7ce8;flex:none">/</span>Respuesta el mismo día hábil</li>
+          <li style="display:flex;gap:12px;font-size:16px;color:#eef0fb"><span style="color:#8b7ce8;flex:none">/</span>Sin compromiso ni contrato de por medio</li>
+          <li style="display:flex;gap:12px;font-size:16px;color:#eef0fb"><span style="color:#8b7ce8;flex:none">/</span>Te decimos si conviene o no invertir todavía</li>
+        </ul>
+        <div data-reveal="media" style="position:relative;margin-top:clamp(28px,3.4vw,42px);aspect-ratio:16/9;border:1px solid rgba(168,178,230,.18);border-radius:4px;overflow:hidden">
+          <img src="assets/equipo-estrategia.jpeg" alt="Equipo de MVD revisando paneles de campañas" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" />
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,14,38,0) 40%, rgba(8,14,38,.78))"></div>
+          <p style="position:absolute;left:18px;right:18px;bottom:16px;font-size:15px;line-height:1.6;color:#eef0fb;max-width:36ch">Habla directo con quien va a operar tu cuenta, no con un comercial.</p>
+        </div>
+      </div>
+      <form onSubmit="{{ enviar }}" style="display:grid;gap:16px;background:#101a41;border:1px solid rgba(168,178,230,.18);border-radius:6px;padding:clamp(22px,3vw,34px)">
+        <label style="display:grid;gap:8px"><span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Nombre</span><input type="text" value="{{ nombre }}" onChange="{{ setNombre }}" required="{{ true }}" style="background:#0b1233;color:#ffffff;border:1px solid rgba(168,178,230,.22);border-radius:4px;padding:15px 14px;font-size:16px;outline:none;transition:border-color .2s ease" style-focus="border-color:#8b7ce8" /></label>
+        <label style="display:grid;gap:8px"><span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Empresa</span><input type="text" value="{{ empresa }}" onChange="{{ setEmpresa }}" style="background:#0b1233;color:#ffffff;border:1px solid rgba(168,178,230,.22);border-radius:4px;padding:15px 14px;font-size:16px;outline:none;transition:border-color .2s ease" style-focus="border-color:#8b7ce8" /></label>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:16px">
+          <label style="display:grid;gap:8px"><span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">WhatsApp</span><input type="tel" value="{{ telefono }}" onChange="{{ setTelefono }}" required="{{ true }}" style="background:#0b1233;color:#ffffff;border:1px solid rgba(168,178,230,.22);border-radius:4px;padding:15px 14px;font-size:16px;outline:none;transition:border-color .2s ease" style-focus="border-color:#8b7ce8" /></label>
+          <label style="display:grid;gap:8px"><span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Email</span><input type="email" value="{{ email }}" onChange="{{ setEmail }}" style="background:#0b1233;color:#ffffff;border:1px solid rgba(168,178,230,.22);border-radius:4px;padding:15px 14px;font-size:16px;outline:none;transition:border-color .2s ease" style-focus="border-color:#8b7ce8" /></label>
+        </div>
+        <label style="display:grid;gap:8px"><span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">¿Qué servicio necesitas?</span>
+          <select value="{{ servicio }}" onChange="{{ setServicio }}" style="background:#0b1233;color:#ffffff;border:1px solid rgba(168,178,230,.22);border-radius:4px;padding:15px 14px;font-size:16px;outline:none">
+            <option value="Meta Ads">Meta Ads</option>
+            <option value="Google Ads">Google Ads</option>
+            <option value="Landing Page">Landing Page</option>
+            <option value="Automatización">Automatización</option>
+            <option value="Estrategia digital">Estrategia digital</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </label>
+        <label style="display:grid;gap:8px"><span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">¿Cuál es tu principal objetivo?</span>
+          <select value="{{ objetivo }}" onChange="{{ setObjetivo }}" style="background:#0b1233;color:#ffffff;border:1px solid rgba(168,178,230,.22);border-radius:4px;padding:15px 14px;font-size:16px;outline:none">
+            <option value="Conseguir clientes">Conseguir clientes</option>
+            <option value="Vender más">Vender más</option>
+            <option value="Generar leads">Generar leads</option>
+            <option value="Mejorar la publicidad actual">Mejorar la publicidad actual</option>
+            <option value="Crear presencia digital">Crear presencia digital</option>
+          </select>
+        </label>
+        <label style="display:grid;gap:8px"><span style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8189ad">Inversión mensual actual</span>
+          <select value="{{ inversion }}" onChange="{{ setInversion }}" style="background:#0b1233;color:#ffffff;border:1px solid rgba(168,178,230,.22);border-radius:4px;padding:15px 14px;font-size:16px;outline:none">
+            <option value="Todavía no invierto">Todavía no invierto</option>
+            <option value="Menos de $500.000 COP">Menos de $500.000 COP</option>
+            <option value="$500.000 a $1.000.000 COP">$500.000 a $1.000.000 COP</option>
+            <option value="$1.000.000 a $3.000.000 COP">$1.000.000 a $3.000.000 COP</option>
+            <option value="Más de $3.000.000 COP">Más de $3.000.000 COP</option>
+          </select>
+        </label>
+        <button type="submit" class="mvd-btn" style="margin-top:6px;min-height:56px;background:#8b7ce8;color:#0a1130;border:none;font-size:16px;font-weight:600;border-radius:2px;cursor:pointer;transition:background .2s ease,transform .16s cubic-bezier(0.23,1,0.32,1),box-shadow .2s ease" style-hover="background:#b6acf5;transform:translateY(-2px);box-shadow:0 16px 34px rgba(139,124,232,.34)" style-active="transform:scale(.97)">Solicitar diagnóstico</button>
+        <p style="font-size:13px;line-height:1.6;color:#6f7799">Al enviar se abre WhatsApp con tus datos cargados para que no los repitas.</p>
+      </form>
+    </div>
+  </section>
+
+  <section style="position:relative;background:#080e26;overflow:hidden">
+    <div style="position:absolute;inset:0;background:linear-gradient(112deg, rgba(139,124,232,.24), rgba(8,14,38,0) 46%, rgba(185,143,214,.22))"></div>
+    <div style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(64px,9vw,132px) clamp(16px,5vw,44px);text-align:center">
+      <h2 data-reveal="1" style="font-family:'Alumni Sans',sans-serif;font-weight:500;font-size:clamp(2.5rem,6.4vw,5rem);line-height:1;text-transform:uppercase;color:#ffffff;max-width:22ch;margin:0 auto">¿Listo para hacer crecer tu negocio?</h2>
+      <p style="font-size:clamp(17px,1.5vw,20px);line-height:1.7;color:#a7adca;max-width:56ch;margin:22px auto 0">Construyamos una estrategia de adquisición que convierta tu inversión publicitaria en oportunidades reales.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:clamp(26px,3.4vw,40px)">
+        <a href="#diagnostico" class="mvd-btn" style="display:flex;align-items:center;min-height:56px;background:#8b7ce8;color:#0a1130;font-size:16px;font-weight:600;padding:0 32px;border-radius:2px;box-shadow:0 20px 50px rgba(139,124,232,.3);transition:background .2s ease,transform .16s cubic-bezier(0.23,1,0.32,1)" style-hover="background:#b6acf5;color:#0a1130;transform:translateY(-2px)" style-active="transform:scale(.97)">Solicitar diagnóstico</a>
+        <a href="#resultados" style="display:flex;align-items:center;min-height:56px;border:1px solid rgba(168,178,230,.28);color:#eef0fb;font-size:16px;font-weight:500;padding:0 32px;border-radius:2px;transition:border-color .2s ease,background .2s ease,transform .16s cubic-bezier(0.23,1,0.32,1)" style-hover="border-color:rgba(139,124,232,.7);background:rgba(139,124,232,.1);color:#ffffff;transform:translateY(-2px)" style-active="transform:scale(.97)">Ver casos de éxito</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#060a1c;border-top:1px solid rgba(168,178,230,.16)">
+    <div style="max-width:1320px;margin:0 auto;padding:clamp(48px,6vw,80px) clamp(16px,5vw,44px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:clamp(28px,4vw,56px)">
+        <div>
+          <img src="assets/md-mark.png" alt="MVD Manager Digital" style="height:72px;width:auto;display:block" />
+          <p style="font-size:16px;line-height:1.7;color:#a7adca;max-width:30ch;margin-top:18px">Estrategia, publicidad y crecimiento digital para negocios que quieren clientes, no likes.</p>
+          <a href="tel:+573233435319" style="display:inline-block;margin-top:18px;font-family:'Roboto Mono',monospace;font-size:14px;letter-spacing:1.4px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">+57 323 3435319</a>
+        </div>
+        <div>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:#6f7799">Servicios</h3>
+          <ul style="display:grid;gap:10px;margin-top:16px">
+            <li><a href="#meta-ads" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Meta Ads</a></li>
+            <li><a href="#servicios" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Google Ads</a></li>
+            <li><a href="#servicios" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Landing Pages</a></li>
+            <li><a href="#servicios" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Automatización</a></li>
+            <li><a href="#servicios" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Analítica</a></li>
+            <li><a href="#servicios" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Estrategia digital</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:#6f7799">Agencia</h3>
+          <ul style="display:grid;gap:10px;margin-top:16px">
+            <li><a href="#nosotros" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Nosotros</a></li>
+            <li><a href="#resultados" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Casos de éxito</a></li>
+            <li><a href="#resenas" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Reseñas</a></li>
+            <li><a href="#proceso" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Proceso</a></li>
+            <li><a href="#faq" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Preguntas frecuentes</a></li>
+            <li><a href="#diagnostico" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:#6f7799">Redes</h3>
+          <ul style="display:grid;gap:10px;margin-top:16px">
+            <li><a href="https://www.instagram.com/mvdmarketingoficial" target="_blank" rel="noopener" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">Instagram</a></li>
+            <li><a href="{{ waLink }}" target="_blank" rel="noopener" style="font-size:15px;color:#eef0fb;transition:color .2s ease" style-hover="color:#b6acf5">WhatsApp</a></li>
+          </ul>
+          <h3 style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:#6f7799;margin-top:24px">Legal</h3>
+          <ul style="display:grid;gap:10px;margin-top:16px">
+            <li><a href="#inicio" style="font-size:15px;color:#a7adca;transition:color .2s ease" style-hover="color:#b6acf5">Política de privacidad</a></li>
+            <li><a href="#inicio" style="font-size:15px;color:#a7adca;transition:color .2s ease" style-hover="color:#b6acf5">Términos y condiciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;margin-top:clamp(34px,5vw,58px);padding-top:24px;border-top:1px solid rgba(168,178,230,.16)">
+        <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1.6px;color:#6f7799">© 2026 MVD Manager Digital</p>
+        <p style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:1.6px;color:#6f7799">@mvdmarketingoficial</p>
+      </div>
+    </div>
+  </footer>
+
+  <div style="position:fixed;bottom:0;left:0;right:0;z-index:90;display:{{ ctaFijoDisplay }};padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(8,14,38,.94);backdrop-filter:blur(12px);border-top:1px solid rgba(168,178,230,.2)">
+    <a href="#diagnostico" style="display:flex;align-items:center;justify-content:center;min-height:54px;background:#8b7ce8;color:#0a1130;font-size:16px;font-weight:600;border-radius:2px">Solicitar diagnóstico</a>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;573233435319&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contacto&quot;},&quot;ctaFijoMovil&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Móvil&quot;}}">
+class Component extends DCLogic {
+  state = {
+    nombre: '', empresa: '', telefono: '', email: '',
+    servicio: 'Meta Ads', objetivo: 'Conseguir clientes', inversion: 'Todavía no invierto',
+    esMovil: false, esCelular: false, menuAbierto: false
+  };
+
+  componentDidMount() {
+    requestAnimationFrame(() => {
+      this.splitWords();
+      this.setupReveal();
+      this.setupSpy();
+      this.setupScroll();
+      this.setupLight();
+      this.setupVideos();
+    });
+    this.mq = window.matchMedia('(max-width: 1080px)');
+    this.mqCta = window.matchMedia('(max-width: 760px)');
+    this.onMq = () => this.setState({ esMovil: this.mq.matches });
+    this.onMqCta = () => this.setState({ esCelular: this.mqCta.matches });
+    this.onMq(); this.onMqCta();
+    this.mq.addEventListener('change', this.onMq);
+    this.mqCta.addEventListener('change', this.onMqCta);
+  }
+
+  componentWillUnmount() {
+    if (this.io) this.io.disconnect();
+    if (this.spy) this.spy.disconnect();
+    if (this.vio) this.vio.disconnect();
+    if (this.mq) this.mq.removeEventListener('change', this.onMq);
+    if (this.mqCta) this.mqCta.removeEventListener('change', this.onMqCta);
+    if (this.onScroll) { window.removeEventListener('scroll', this.onScroll); window.removeEventListener('resize', this.onScroll); }
+    if (this.litEls && this.onLit) this.litEls.forEach((el) => el.removeEventListener('mousemove', this.onLit));
+  }
+
+  reduce() { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+
+  splitWords() {
+    if (this.reduce()) return;
+    const root = this.el || document;
+    root.querySelectorAll('[data-reveal="words"]').forEach((h) => {
+      if (h.dataset.split) return;
+      h.dataset.split = '1';
+      const frag = document.createDocumentFragment();
+      Array.from(h.childNodes).forEach((n) => {
+        if (n.nodeType === 3) {
+          n.textContent.split(/(\s+)/).forEach((t) => {
+            if (!t) return;
+            if (/^\s+$/.test(t)) { frag.appendChild(document.createTextNode(' ')); return; }
+            const s = document.createElement('span');
+            s.className = 'mvd-w';
+            s.textContent = t;
+            frag.appendChild(s);
+          });
+        } else {
+          const s = document.createElement('span');
+          s.className = 'mvd-w';
+          s.appendChild(n.cloneNode(true));
+          frag.appendChild(s);
+        }
+      });
+      h.textContent = '';
+      h.appendChild(frag);
+      Array.from(h.querySelectorAll('.mvd-w')).forEach((w, i) => { w.style.animationDelay = (i * 55) + 'ms'; });
+    });
+  }
+
+  setupScroll() {
+    const root = this.el || document;
+    const pars = Array.from(root.querySelectorAll('[data-par]'));
+    const prog = root.querySelector('[data-prog]');
+    const suave = !this.reduce();
+    let pendiente = false;
+    this.onScroll = () => {
+      if (pendiente) return;
+      pendiente = true;
+      requestAnimationFrame(() => {
+        pendiente = false;
+        const y = window.scrollY || 0;
+        if (prog) {
+          const h = document.documentElement.scrollHeight - window.innerHeight;
+          prog.style.transform = 'scaleX(' + (h > 0 ? Math.min(y / h, 1) : 0) + ')';
+        }
+        if (!suave) return;
+        const mitad = window.innerHeight / 2;
+        pars.forEach((el) => {
+          const r = el.getBoundingClientRect();
+          const f = parseFloat(el.getAttribute('data-par')) || 0;
+          el.style.transform = 'translate3d(0,' + ((r.top + r.height / 2 - mitad) * -f).toFixed(1) + 'px,0)';
+        });
+      });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onScroll);
+    this.onScroll();
+  }
+
+  setupVideos() {
+    const root = this.el || document;
+    const vids = Array.from(root.querySelectorAll('video[data-vid]'));
+    vids.forEach((v) => { v.muted = true; v.defaultMuted = true; v.playsInline = true; });
+    this.vio = new IntersectionObserver((entradas) => {
+      entradas.forEach((e) => {
+        const v = e.target;
+        if (e.isIntersecting) { const p = v.play(); if (p && p.catch) p.catch(() => {}); }
+        else if (!v.paused) v.pause();
+      });
+    }, { rootMargin: '120px 0px', threshold: 0.12 });
+    vids.forEach((v) => this.vio.observe(v));
+  }
+
+  setupLight() {
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+    const root = this.el || document;
+    this.litEls = Array.from(root.querySelectorAll('.mvd-lit'));
+    this.onLit = (e) => {
+      const el = e.currentTarget;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (((e.clientX - r.left) / r.width) * 100).toFixed(1) + '%');
+      el.style.setProperty('--my', (((e.clientY - r.top) / r.height) * 100).toFixed(1) + '%');
+    };
+    this.litEls.forEach((el) => el.addEventListener('mousemove', this.onLit));
+  }
+
+  animarNumero(el) {
+    const target = parseFloat(el.getAttribute('data-count'));
+    const mil = el.getAttribute('data-format') === 'mil';
+    const dur = 1200;
+    const t0 = performance.now();
+    const paso = (t) => {
+      const p = Math.min((t - t0) / dur, 1);
+      const val = Math.round(target * (1 - Math.pow(1 - p, 3)));
+      el.textContent = mil ? val.toLocaleString('es-CO') : String(val);
+      if (p < 1) requestAnimationFrame(paso);
+    };
+    requestAnimationFrame(paso);
+  }
+
+  activarPanel(root) {
+    root.querySelectorAll('[data-count]').forEach((el) => {
+      if (el.dataset.done) return;
+      el.dataset.done = '1';
+      this.animarNumero(el);
+    });
+    root.querySelectorAll('[data-grow]').forEach((el) => {
+      el.style.width = el.getAttribute('data-grow') + '%';
+    });
+    root.querySelectorAll('[data-bar]').forEach((el, i) => {
+      el.style.animation = 'mvdBar .9s cubic-bezier(0.23,1,0.32,1) both';
+      el.style.animationDelay = (i * 70) + 'ms';
+    });
+  }
+
+  setupReveal() {
+    const root = this.el || document;
+    const reducir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const nodos = Array.from(root.querySelectorAll('[data-reveal]'));
+    if (reducir) { nodos.forEach((n) => n.classList.add('is-in')); root.querySelectorAll('section').forEach((s) => this.activarPanel(s)); return; }
+    this.io = new IntersectionObserver((entradas) => {
+      entradas.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const t = e.target;
+        this.io.unobserve(t);
+        const i = Array.prototype.indexOf.call(t.parentNode.children, t);
+        t.style.animationDelay = Math.min(i, 6) * 60 + 'ms';
+        t.classList.add('is-in');
+        this.activarPanel(t);
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.08 });
+    nodos.forEach((n) => this.io.observe(n));
+  }
+
+  setupSpy() {
+    const root = this.el || document;
+    const nav = root.querySelector('[data-nav]');
+    if (!nav) return;
+    const enlaces = Array.from(nav.querySelectorAll('a[href^="#"]'));
+    const pintar = (id) => enlaces.forEach((a) => {
+      const on = a.getAttribute('href') === '#' + id;
+      a.style.color = on ? '#ffffff' : '';
+      a.style.background = on ? 'rgba(139,124,232,.16)' : '';
+    });
+    const secciones = enlaces
+      .map((a) => root.querySelector(a.getAttribute('href')))
+      .filter(Boolean);
+    this.spy = new IntersectionObserver((entradas) => {
+      const visible = entradas.filter((e) => e.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) pintar(visible.target.id);
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+    secciones.forEach((s) => this.spy.observe(s));
+  }
+
+  alternarMenu = () => this.setState((s) => ({ menuAbierto: !s.menuAbierto }));
+  cerrarMenu = () => this.setState({ menuAbierto: false });
+  set = (k) => (e) => this.setState({ [k]: e.target.value });
+
+  phone() { return String(this.props.whatsappNumber || '573233435319').replace(/\D/g, ''); }
+
+  enviar = (e) => {
+    e.preventDefault();
+    const s = this.state;
+    const msg = [
+      'Hola MVD. Quiero solicitar un diagnóstico.',
+      'Nombre: ' + (s.nombre || '-'),
+      'Empresa: ' + (s.empresa || '-'),
+      'WhatsApp: ' + (s.telefono || '-'),
+      'Email: ' + (s.email || '-'),
+      'Servicio: ' + s.servicio,
+      'Objetivo: ' + s.objetivo,
+      'Inversión actual: ' + s.inversion
+    ].join('\n');
+    window.open('https://wa.me/' + this.phone() + '?text=' + encodeURIComponent(msg), '_blank');
+  };
+
+  renderVals() {
+    const s = this.state;
+    const ctaFijo = this.props.ctaFijoMovil ?? true;
+    const herramientas = ['Meta Ads', 'Google Ads', 'WhatsApp Business', 'GA4', 'Google Tag Manager', 'Landing Pages', 'Automatización de leads', 'Meta Pixel', 'Looker Studio', 'CRM'];
+    return {
+      rail: herramientas.concat(herramientas),
+      nombre: s.nombre, empresa: s.empresa, telefono: s.telefono, email: s.email,
+      servicio: s.servicio, objetivo: s.objetivo, inversion: s.inversion,
+      setNombre: this.set('nombre'), setEmpresa: this.set('empresa'),
+      setTelefono: this.set('telefono'), setEmail: this.set('email'),
+      setServicio: this.set('servicio'), setObjetivo: this.set('objetivo'),
+      setInversion: this.set('inversion'),
+      enviar: this.enviar,
+      waLink: 'https://wa.me/' + this.phone(),
+      heroCols: s.esMovil ? '1fr' : 'minmax(0,1.05fr) minmax(0,.95fr)',
+      metaCols: s.esMovil ? '1fr' : 'minmax(0,1.25fr) minmax(0,.9fr)',
+      chainCols: s.esCelular ? '1fr' : 'minmax(120px,190px) 1fr',
+      navDisplay: s.esMovil ? 'none' : 'flex',
+      ctaHeaderDisplay: s.esMovil ? 'none' : 'flex',
+      burgerDisplay: s.esMovil ? 'flex' : 'none',
+      menuDisplay: (s.esMovil && s.menuAbierto) ? 'block' : 'none',
+      menuAbierto: s.menuAbierto,
+      alternarMenu: this.alternarMenu,
+      cerrarMenu: this.cerrarMenu,
+      burgerTop: s.menuAbierto ? '6.2px' : '0px',
+      burgerBottom: s.menuAbierto ? '6.2px' : '0px',
+      burgerRot1: s.menuAbierto ? 'rotate(45deg)' : 'none',
+      burgerRot2: s.menuAbierto ? 'rotate(-45deg)' : 'none',
+      burgerMidOpacity: s.menuAbierto ? 0 : 1,
+      ctaFijoDisplay: (ctaFijo && s.esCelular) ? 'block' : 'none',
+      padBottom: (ctaFijo && s.esCelular) ? '78px' : '0px'
+    };
+  }
+}
+
+</script>
+</body>
+</html>
